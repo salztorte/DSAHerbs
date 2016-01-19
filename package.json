@@ -1,0 +1,31 @@
+{
+  "name": "DSAHerps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salztorte/DSAHerps.git"
+  },
+  "keywords": [],
+  "author": "Oliver Franzen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salztorte/DSAHerps/issues"
+  },
+  "homepage": "https://github.com/salztorte/DSAHerps#readme",
+  "dependencies": {
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "webpack": "^1.12.11"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.12",
+    "babel-loader": "^6.0.1",
+    "babel-plugin-react-transform": "^1.1.0",
+    "babel-plugin-transform-react-jsx": "^6.4.0",
+    "babel-preset-es2015": "^6.0.12",
+    "babel-preset-react": "^6.0.15"
+  }
+}
