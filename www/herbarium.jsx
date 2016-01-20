@@ -17,7 +17,7 @@ let herp = {
 		"Typ"          : MEANS_TYPES.Alchimistischesmittel,
 		"Effect"      : "",
 		"Quelle"       : "",
-		"Using" : []
+		"Verarbeitung" : []
 	}
 };
 

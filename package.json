@@ -4,7 +4,8 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build" : "./node_modules/.bin/webpack --progress"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --profile --colors"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,9 @@
   "dependencies": {
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "webpack": "^1.12.11"
+    "webpack": "^1.12.11",
+    "react-tap-event-plugin": "^0.2.1",
+    "material-ui": "^0.14.2"
   },
   "devDependencies": {
     "babel-core": "^6.0.12",
