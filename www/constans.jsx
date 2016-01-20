@@ -13,7 +13,8 @@ export const PLANTS_TYPES = keyMirror([
 										  "Nutzpflanze",
 										  "Heilpflanze",
 										  "Giftplanze",
-										  "Uebernatürlichepflanze"
+										  "Himmlischepflanze"
+										  //"Uebernatürlichepflanze"
 									  ]);
 export const POISON_TYPES = keyMirror([
 										  "Waffengift",
