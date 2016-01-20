@@ -1,11 +1,12 @@
 {
   "name": "DSAHerps",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress --profile --colors"
+    "build": "./node_modules/.bin/webpack --progress --profile --colors",
+    "clean" : "rm -r build/*"
   },
   "repository": {
     "type": "git",
@@ -13,7 +14,7 @@
   },
   "keywords": [],
   "author": "Oliver Franzen",
-  "license": "MIT",
+  "license": "LGPL",
   "bugs": {
     "url": "https://github.com/salztorte/DSAHerps/issues"
   },
