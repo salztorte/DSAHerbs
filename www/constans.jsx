@@ -9,8 +9,6 @@ let keyMirror = function(keys){
 	return jsonObj;
 };
 
-
-
 export const PLANTS_TYPES = keyMirror([
 										  "Nutzpflanze",
 										  "Heilpflanze",
@@ -23,7 +21,6 @@ export const POISON_TYPES = keyMirror([
 										  "Atemgift",
 										  "Kontaktgift"
 									  ]);
-
 export const MEANS_TYPES = keyMirror([
 										 "Heilmittel",
 										 "Stärkungsmittel",
@@ -35,7 +32,6 @@ export const MEANS_TYPES = keyMirror([
 										 "Räuchermittel",
 										 "Alchimistischesmittel"
 									 ]);
-
 export const OTHERS_TYPES = keyMirror([
 										  "Parfüm",
 										  "Gewürz",

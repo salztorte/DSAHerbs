@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "",
-  "scripts": {},
+  "scripts": {
+    "build" : "./node_modules/.bin/webpack --progress"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/salztorte/DSAHerps.git"
