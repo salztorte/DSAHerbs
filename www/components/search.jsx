@@ -1,21 +1,13 @@
 "use strict";
 import React, { Component } from "react";
-import Toolbar from 'material-ui/lib/toolbar/toolbar';
-import ToolbarGroup from 'material-ui/lib/toolbar/toolbar-group';
-import ToolbarTitle from 'material-ui/lib/toolbar/toolbar-title';
+import MyToolbar from './toolbar.jsx';
 
 class Search extends Component {
     render (){
         return (
-            <Toolbar>
-                <ToolbarGroup firstChild={true} float="left">
-                    <ToolbarTitle text="Options" />
-                </ToolbarGroup>
-            </Toolbar>
+            <MyToolbar title="DSAHerps" />
         );
     }
 };
-
-
 
 export default Search;
