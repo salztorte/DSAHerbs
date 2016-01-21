@@ -1,5 +1,6 @@
 "use strict";
 import expect from 'expect';
+//var expect = require('expect');
 
 describe("tests", function() {
 	it("should test", function(){
