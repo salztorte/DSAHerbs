@@ -1,5 +1,5 @@
 "use strict";
-import { PLANTS_TYPES , POISON_TYPES , MEANS_TYPES , OTHERS_TYPES } from './www/constans.jsx';
+import { PLANTS_TYPES , POISON_TYPES , MEANS_TYPES , OTHERS_TYPES } from './constans.jsx';
 
 let herp = {
 	"Alraune"                : {

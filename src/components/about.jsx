@@ -15,6 +15,9 @@ class About extends BaseComponent {
                 <List>
                     Copyright © 2016 von Oliver Franzen
                 </List>
+                <List>
+                    Kontakt : <a href= "mailto:salztorte92@gmail.com">salztorte92@gmail.com</a>
+                </List>
             </Content>
         );
     }

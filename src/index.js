@@ -3,8 +3,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Router, Route, hashHistory } from 'react-router';
-import Search from './www/components/search.jsx';
-import About from './www/components/about.jsx';
+import Search from './components/search.jsx';
+import About from './components/about.jsx';
 
 injectTapEventPlugin();
 
