@@ -9,34 +9,38 @@ let keyMirror = function(keys){
 	return jsonObj;
 };
 
-export const PLANTS_TYPES = keyMirror([
-										  "Nutzpflanze",
-										  "Heilpflanze",
-										  "Giftplanze",
-										  "Himmlischepflanze"
-										  //"Uebernatürlichepflanze"
-									  ]);
-export const POISON_TYPES = keyMirror([
-										  "Waffengift",
-										  "Einnahmegift",
-										  "Atemgift",
-										  "Kontaktgift"
-									  ]);
-export const MEANS_TYPES = keyMirror([
-										 "Heilmittel",
-										 "Stärkungsmittel",
-										 "Rauschmittel",
-										 "Lebensmittel",
-										 "Instektenschutzmittel",
-										 "Schmerzmittel",
-										 "Leuchtmittel",
-										 "Räuchermittel",
-										 "Alchimistischesmittel"
-									 ]);
-export const OTHERS_TYPES = keyMirror([
-										  "Parfüm",
-										  "Gewürz",
-										  "Klebstoff",
-										  "Speziell"
-									  ]);
-export const TEST = keyMirror([1,2,3,4,5]);
+export const PLANTS_TYPES = keyMirror(
+	[
+		"Nutzpflanze",
+		"Heilpflanze",
+		"Giftplanze",
+		"Himmlischepflanze"
+		//"Uebernatürlichepflanze"
+	]);
+export const POISON_TYPES = keyMirror(
+	[
+		"Waffengift",
+		"Einnahmegift",
+		"Atemgift",
+		"Kontaktgift",
+		"Gegengift"
+	]);
+export const MEANS_TYPES = keyMirror(
+	[
+		"Heilmittel",
+		"Stärkungsmittel",
+		"Rauschmittel",
+		"Lebensmittel",
+		"Instektenschutzmittel",
+		"Schmerzmittel",
+		"Leuchtmittel",
+		"Räuchermittel",
+		"Alchimistischesmittel"
+	]);
+export const OTHERS_TYPES = keyMirror(
+	[
+		"Parfüm",
+		"Gewürz",
+		"Klebstoff",
+		"Speziell"
+	]);
