@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import List from 'material-ui/lib/lists/list';
 import ListItem from 'material-ui/lib/lists/list-item';
-import Toolbar from './toolbar.jsx';
+import Toolbar from './tools.jsx';
 
 
 class About extends Component {
