@@ -1,9 +1,12 @@
 "use strict";
 import React, { Component } from "react";
-import{ Toolbar, BaseComponent} from './tools.jsx';
+import{  BaseComponent, Content} from './tools.jsx';
 import SelectField from 'material-ui/lib/select-field';
 import MenuItem from 'material-ui/lib/menus/menu-item';
-import { PLANTS_TYPES } from '../constans.jsx';
+import RaisedButton from 'material-ui/lib/raised-button';
+import { PLANTS_TYPES, POISON_TYPES } from '../constans.jsx';
+
+
 
 let createWrapper = function(itemsJson){
     let resultArr = [];
@@ -29,6 +32,10 @@ let createWrapper = function(itemsJson){
     return resultArr;
 };
 
+let style = {
+    width : "100%"
+}
+
 class Search extends BaseComponent {
     constructor(props){
         super(props);
@@ -41,11 +48,15 @@ class Search extends BaseComponent {
             }
         }
         this.state = initValue;
-        this._bind("_handleChange", "_updateState");
+        this._bind("_updateState", "_handlePlantChange", "_handlePosionChange");
     }
 
-    _handleChange(event, index, value){
+    _handlePlantChange(event, index, value){
         this._updateState("plant", value);
+    }
+
+    _handlePosionChange(event, index, value){
+        this._updateState("poison", value);
     }
 
     _updateState(name, value){
@@ -56,18 +67,25 @@ class Search extends BaseComponent {
 
     render(){
         return (
-            <div>
-                <Toolbar title="DSAHerps"/>
-                <SelectField value={this.state.value.plant} onChange={this._handleChange}
-                             floatingLabelText="Pflanzenauswahl">
-                    {createWrapper(PLANTS_TYPES)}
-                </SelectField>
-            </div>
+                <Content title="DSAHerps">
+                    <SelectField value={this.state.value.plant} onChange={this._handlePlantChange}
+                                 floatingLabelText="Pflanzenauswahl"
+                                 style={style}>
+                        {createWrapper(PLANTS_TYPES)}
+                    </SelectField>
+                    <SelectField value={this.state.value.poison} onChange={this._handlePosionChange}
+                                 floatingLabelText="Giftauswahl"
+                                 style={style}>
+                        {createWrapper(POISON_TYPES)}
+                    </SelectField>
+
+                    <RaisedButton label="Suche starten" primary={true} style={style}/>
+                </Content>
         );
     }
 
 }
-;
+
 
 
 export default Search;

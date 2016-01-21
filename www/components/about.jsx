@@ -1,25 +1,24 @@
 "use strict";
 import React, { Component } from "react";
+import {BaseComponent , Content} from "./tools.jsx"
 import List from 'material-ui/lib/lists/list';
 import ListItem from 'material-ui/lib/lists/list-item';
-import Toolbar from './tools.jsx';
 
 
-class About extends Component {
+class About extends BaseComponent {
     render(){
         return (
-            <div>
-                <Toolbar title="About"/>
+            <Content title="About">
                 <List>
                     DSA Herps - Version 0.0
                 </List>
                 <List>
                     Copyright © 2016 von Oliver Franzen
                 </List>
-            </div>
+            </Content>
         );
     }
 }
-;
+
 
 export default About;
