@@ -39,3 +39,4 @@ export const OTHERS_TYPES = keyMirror([
 										  "Klebstoff",
 										  "Speziell"
 									  ]);
+export const TEST = keyMirror([1,2,3,4,5]);
