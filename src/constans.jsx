@@ -1,8 +1,8 @@
 "use strict";
 
-let keyMirror = function (keys) {
+let keyMirror = function(keys){
     let jsonObj = {};
-    keys.forEach(function (item) {
+    keys.forEach(function(item){
         jsonObj[item] = item;
     });
 
@@ -15,7 +15,6 @@ const PLANTS_TYPES = keyMirror(
         "Heilpflanze",
         "Giftplanze",
         "Himmlischepflanze"
-        //"Uebernatürlichepflanze"
     ]);
 const POISON_TYPES = keyMirror(
     [
@@ -46,3 +45,4 @@ const OTHERS_TYPES = keyMirror(
     ]);
 
 export { PLANTS_TYPES, MEANS_TYPES, POISON_TYPES, OTHERS_TYPES, keyMirror };
+
