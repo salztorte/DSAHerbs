@@ -4,6 +4,7 @@ import React from "react";
 import TestUtils from "react-addons-test-utils";
 import Search from "../../src/components/search.jsx";
 
+
 function setup() {
     const actions = {
         handlePlantChange: expect.createSpy(),
@@ -20,6 +21,7 @@ function setup() {
 
 it('first button should call increment', () => {
     const { selectFields, actions } = setup();
-    //TestUtils.Simulate.
+    selectFields[0].value =
+    TestUtils.Simulate.change(selectFields[0])
     //expect(actions.increment).toHaveBeenCalled()
 })
