@@ -45,4 +45,4 @@ const OTHERS_TYPES = keyMirror(
         "Speziell"
     ]);
 
-export {keyMirror, PLANTS_TYPES, MEANS_TYPES, POISON_TYPES, OTHERS_TYPES};
+export { PLANTS_TYPES, MEANS_TYPES, POISON_TYPES, OTHERS_TYPES, keyMirror };
