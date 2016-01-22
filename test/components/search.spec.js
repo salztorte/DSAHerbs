@@ -14,7 +14,12 @@ function setup() {
     return {
         component: component,
         actions: actions,
-        buttons: TestUtils.scryRenderedDOMComponentsWithTag(component, "button"),
-        p: TestUtils.findRenderedDOMComponentWithTag(component, "p")
+        selectFields: TestUtils.scryRenderedDOMComponentsWithTag(component, "SelectField"),
     }
 }
+
+it('first button should call increment', () => {
+    const { selectFields, actions } = setup();
+    //TestUtils.Simulate.
+    //expect(actions.increment).toHaveBeenCalled()
+})
