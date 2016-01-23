@@ -10,7 +10,7 @@
     "test": "mocha --recursive --compilers js:babel-core/register --require ./test/setup.js",
     "test:watch": "npm run test -- --watch",
     "bundel": "./node_modules/.bin/webpack --progress --profile --colors",
-    "bundel:watch": "npm run bundel --watch"
+    "bundel:watch": "./node_modules/.bin/webpack --progress --profile --colors --watch"
   },
   "repository": {
     "type": "git",
@@ -24,11 +24,12 @@
   },
   "homepage": "https://github.com/salztorte/DSAHerps#readme",
   "dependencies": {
+    "material-ui": "^0.14.2",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "react-tap-event-plugin": "^0.2.1",
     "react-router": "^2.0.0-rc5",
-    "material-ui": "^0.14.2"
+    "react-tap-event-plugin": "^0.2.1",
+    "ydn.db": "^1.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.0.12",
@@ -41,7 +42,6 @@
     "jsdom": "^5.6.1",
     "mocha": "^2.2.5",
     "react-addons-test-utils": "^0.14.6",
-    "webpack": "^1.12.11",
-    "underscore": "^1.8.3"
+    "webpack": "^1.12.11"
   }
 }
