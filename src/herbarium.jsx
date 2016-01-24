@@ -25,7 +25,7 @@ let herps = [
 	}
 ];
 
-export default herps;
+export {herps};
 /*{
  "Typ" : "",
  "Wirkung" : "",
