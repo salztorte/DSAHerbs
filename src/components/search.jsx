@@ -5,6 +5,7 @@ import SelectField from 'material-ui/lib/select-field';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 import RaisedButton from 'material-ui/lib/raised-button';
 import { PLANTS_TYPES, POISON_TYPES, MEANS_TYPES } from '../constans.jsx';
+import {db} from './../database.jsx';
 
 let createWrapper = function(itemsJson){
 	let resultArr = [];
@@ -79,7 +80,7 @@ let Search = React.createClass(
 								 style={style}>
 						{createWrapper(MEANS_TYPES)}
 					</SelectField>
-					<RaisedButton label="Suche starten" primary={true} style={style}/>
+					<RaisedButton label="Suche starten" primary={true} style={style} onClick={db.init}/>
 				</Content>
 			);
 		},
