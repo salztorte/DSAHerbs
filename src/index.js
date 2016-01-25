@@ -5,8 +5,10 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Router, Route, hashHistory } from 'react-router';
 import Search from './components/search.jsx';
 import About from './components/about.jsx';
+import {db} from './database.jsx';
 
 injectTapEventPlugin();
+db.init();
 
 render(
     <Router history={hashHistory}>
