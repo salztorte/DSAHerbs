@@ -11,14 +11,12 @@ let initState = {
 
 let changeDropdown = function(state = initState, action){
     let nextState = initState;
-    newState[action.id] = action.value;
-    return [...state, newState];
+    nextState[action.id] = action.value;
+    return [...state, nextState];
 };
 
 
-const App = combineReducers({
-                                changeDropdown
-                            });
+const reducer = combineReducers({changeDropdown});
 
 
-export default App
+export default reducer;

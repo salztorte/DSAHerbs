@@ -1,17 +1,20 @@
 "use strict";
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-//import Counter from '../components/Counter'
-//import * as CounterActions from '../actions/counter'
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import Search from '../../components/search.jsx';
+import * as SearchActions from '../actions/searchAction.js';
 
 function mapStateToProps(state) {
     return {
-        counter: state.counter
+        "plant" : state.plant,
+        "poison" : state.poison,
+        "means" : state.means,
+        "others" : state.others
     };
 };
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators(CounterActions, git dispatch);
+    return bindActionCreators(SearchActions, dispatch);
 }
 
-//export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
