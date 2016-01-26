@@ -24,15 +24,4 @@ Dropdown.propTypes = {
     elements: React.PropTypes.objectOf(React.PropTypes.string)
 }
 
-
-
-//const Dorpdown = props => (
-//    <SelectField value={props.value}
-//                 floatingLabelText={props.label}
-//                 style={props.style}
-//                 onChange={props.onChange}>
-//        {createWrapper(props.elements)}
-//    </SelectField>
-//);
-
 export default Dropdown;
