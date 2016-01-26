@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "readme": "README.md",
-  "description": "",
+  "description": "Ein Fanprojekt zu 'Das Schwarze Auge'",
   "main": "",
   "scripts": {
     "test": "mocha --recursive --compilers js:babel-core/register",
-    "test:watch": "npm run test --watch",
+    "test:watch": "npm run test -- --watch",
     "bundel": "./node_modules/.bin/webpack --progress --profile --colors",
-    "bundel:watch": "npm run bundel --watch"
+    "bundel:watch": "npm run bundel -- --watch"
   },
   "repository": {
     "type": "git",

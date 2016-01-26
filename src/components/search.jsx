@@ -8,9 +8,11 @@ import { PLANTS_TYPES, POISON_TYPES, MEANS_TYPES } from '../config/constans.jsx'
 
 const Search = props =>{
     //const { increment, reset, decrement, counter } = this.props
+    const { changeDropdown } = props;
     return (<Content title="DSAHerps">
         <Dropdown elements={PLANTS_TYPES}
-                  label={"Pflanzenauswahl"}/>
+                  label={"Pflanzenauswahl"}
+                    onChange={changeDropdown}/>
 
         <Dropdown elements={POISON_TYPES}
                   label={"Giftauswahl"}/>
