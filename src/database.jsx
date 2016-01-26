@@ -16,8 +16,6 @@ let db = new function () {
                 });
         });
     };
-
-
     this.getValues = function(){
 
     }

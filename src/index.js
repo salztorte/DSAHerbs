@@ -15,5 +15,4 @@ render(
         <Route path='/' component={Search} />
         <Route path="/about" component={About}/>
     </Router>,
-    document.getElementById('content')
-);
+    document.getElementById('content'));

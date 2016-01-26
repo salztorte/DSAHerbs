@@ -6,11 +6,10 @@
   "description": "",
   "main": "",
   "scripts": {
-    "install": "npm i",
     "test": "mocha --recursive --compilers js:babel-core/register --require ./test/setup.js",
     "test:watch": "npm run test -- --watch",
     "bundel": "./node_modules/.bin/webpack --progress --profile --colors",
-    "bundel:watch": "./node_modules/.bin/webpack --progress --profile --colors --watch"
+    "bundel:watch": "npm run bundel --watch"
   },
   "repository": {
     "type": "git",

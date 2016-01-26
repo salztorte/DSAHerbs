@@ -15,7 +15,6 @@ let createWrapper = function(itemsJson){
 			key         : " ",
 			primaryText : "-",
 			value       : null
-
 		})
 	);
 
