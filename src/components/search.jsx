@@ -4,7 +4,7 @@ import{  Content} from './tools.jsx';
 import SelectField from 'material-ui/lib/select-field';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 import RaisedButton from 'material-ui/lib/raised-button';
-import { PLANTS_TYPES, POISON_TYPES, MEANS_TYPES } from '../constans.jsx';
+import { PLANTS_TYPES, POISON_TYPES, MEANS_TYPES } from '../config/constans.jsx';
 
 
 let createWrapper = function(itemsJson){
@@ -27,7 +27,6 @@ let createWrapper = function(itemsJson){
 		});
 		resultArr.push(ele);
 	}
-	;
 	return resultArr;
 };
 
