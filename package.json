@@ -7,7 +7,7 @@
   "main": "",
   "scripts": {
     "test": "mocha --recursive --compilers js:babel-core/register --require ./test/setup.js",
-    "test:watch": "npm run test -- --watch",
+    "test:watch": "npm run test --watch",
     "bundel": "./node_modules/.bin/webpack --progress --profile --colors",
     "bundel:watch": "npm run bundel --watch"
   },
@@ -28,7 +28,7 @@
     "react-dom": "^0.14.6",
     "react-router": "^2.0.0-rc5",
     "react-tap-event-plugin": "^0.2.1",
-    "ydn.db": "^1.3.0"
+    "redux": "^3.0.6"
   },
   "devDependencies": {
     "babel-core": "^6.0.12",
