@@ -5,33 +5,27 @@ import SelectField from 'material-ui/lib/select-field';
 
 let createWrapper = function(itemsJson){
     let resultArr = [];
-    resultArr.push(
-        React.createElement(MenuItem, {
-            label : " ",
-            key : " ",
-            primaryText : "-",
-            value : null
-        })
-    );
-
+    resultArr.push(<MenuItem primaryText="-" label=" " key=" " value={null} />);
     for(var item in itemsJson){
-        let ele = React.createElement(MenuItem, {
-            key : item,
-            primaryText : item,
-            value : item
-        });
-        resultArr.push(ele);
+        resultArr.push(<MenuItem primaryText={item} key={item} value={item} />);
     }
     return resultArr;
 };
 
 
-const Dorpdown = props => (
+const Dropdown = props => (
     <SelectField floatingLabelText={props.label}
                  style={{width : "100%"}}>
         {createWrapper(props.elements)}
     </SelectField>
 );
+Dropdown.propTypes = {
+    label: React.PropTypes.string.isRequired,
+    elements: React.PropTypes.objectOf(React.PropTypes.string)
+}
+
+
+
 //const Dorpdown = props => (
 //    <SelectField value={props.value}
 //                 floatingLabelText={props.label}
@@ -41,4 +35,4 @@ const Dorpdown = props => (
 //    </SelectField>
 //);
 
-export default Dorpdown;
+export default Dropdown;

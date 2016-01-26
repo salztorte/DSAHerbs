@@ -1,23 +1,26 @@
 "use strict";
 import React from "react";
 import{  Content } from './toolbar.jsx';
-import Dorpdown from './dropdown.jsx';
+import Dropdown from './dropdown.jsx';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 import RaisedButton from 'material-ui/lib/raised-button';
 import { PLANTS_TYPES, POISON_TYPES, MEANS_TYPES } from '../config/constans.jsx';
 
 const Search = props =>(
     <Content title="DSAHerps">
-        <Dorpdown elements={PLANTS_TYPES}
-                  label="Pflanzenauswahl"/>
+        <Dropdown elements={PLANTS_TYPES}
+                  label={"Pflanzenauswahl"}/>
 
-        <Dorpdown elements={POISON_TYPES}
-                  label="Giftauswahl"/>
+        <Dropdown elements={POISON_TYPES}
+                  label={"Giftauswahl"}/>
 
-        <Dorpdown elements={MEANS_TYPES}
-                  label="Mittelauswahl"/>
+        <Dropdown elements={MEANS_TYPES}
+                  label={"Mittelauswahl"}/>
+
+        <RaisedButton label="Suche starten" primary={true} style={{width : "100%"}}/>
     </Content>
 );
+Search.propTypes = {};
 //let Search = React.createClass(
 //    {
 //        "render" : function(){

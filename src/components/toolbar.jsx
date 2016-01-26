@@ -16,10 +16,9 @@ let style = {
 
 const menuIcon = <IconButton><MoreVertIcon /></IconButton>;
 const menuItems = [
-    <Link to="/"><MenuItem primaryText="Search"/></Link>,
-    <Link to="/about"><MenuItem primaryText="About"/></Link>
+    <Link key="Search" to="/"><MenuItem primaryText="Search"/></Link>,
+    <Link key="About" to="/about"><MenuItem primaryText="About"/></Link>
 ];
-
 const ContextMenu = <IconMenu iconButtonElement={menuIcon} targetOrigin={style} anchorOrigin={style}>
     {menuItems}
 </IconMenu>
@@ -32,14 +31,21 @@ const Toolbar = props => (
         iconElementRight={ContextMenu}
     />
 );
+Toolbar.propTypes = {
+    title: React.PropTypes.string.isRequired,
+}
+
 
 const Content = props => (
     <div>
-        <Toolbar title={props.title} menu={props.menu}/>
+        <Toolbar title={props.title}/>
         <div style={{marginLeft : 20,marginRight : 20}}>
             {props.children}
         </div>
     </div>
 );
+Content.propTypes = {
+    title: React.PropTypes.string.isRequired,
+}
 
 export { Content, Toolbar };

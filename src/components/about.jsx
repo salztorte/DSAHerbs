@@ -18,5 +18,5 @@ const About = props =>(
         </List>
     </Content>
 );
-
+About.propTypes = {};
 export default About;
