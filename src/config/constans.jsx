@@ -46,7 +46,8 @@ export const OTHERS_TYPES = keyMirror(
 
 
 export const INIT_STATE = {
-    "Pflanzenauswahl" : null
+    "Pflanzenauswahl" : null,
+
 };
 
 
