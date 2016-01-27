@@ -13,7 +13,6 @@ const Search = props =>{
                   value={""}/>
 
 
-
         <RaisedButton label="Suche starten" primary={true} style={{width : "100%"}}/>
     </Content>)
 };
