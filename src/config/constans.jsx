@@ -1,6 +1,6 @@
 "use strict";
 
-let keyMirror = function(keys){
+export  let keyMirror = function(keys){
     let jsonObj = {};
     keys.forEach(function(item){
         jsonObj[item] = item;
@@ -9,14 +9,14 @@ let keyMirror = function(keys){
     return jsonObj;
 };
 
-const PLANTS_TYPES = keyMirror(
+export const PLANTS_TYPES = keyMirror(
     [
         "Nutzpflanze",
         "Heilpflanze",
         "Giftplanze",
         "Himmlischepflanze"
     ]);
-const POISON_TYPES = keyMirror(
+export const POISON_TYPES = keyMirror(
     [
         "Waffengift",
         "Einnahmegift",
@@ -24,7 +24,7 @@ const POISON_TYPES = keyMirror(
         "Kontaktgift",
         "Gegengift"
     ]);
-const MEANS_TYPES = keyMirror(
+export const MEANS_TYPES = keyMirror(
     [
         "Heilmittel",
         "Stärkungsmittel",
@@ -36,7 +36,7 @@ const MEANS_TYPES = keyMirror(
         "Räuchermittel",
         "Alchimistischesmittel"
     ]);
-const OTHERS_TYPES = keyMirror(
+export const OTHERS_TYPES = keyMirror(
     [
         "Parfüm",
         "Gewürz",
@@ -44,5 +44,9 @@ const OTHERS_TYPES = keyMirror(
         "Speziell"
     ]);
 
-export { PLANTS_TYPES, MEANS_TYPES, POISON_TYPES, OTHERS_TYPES, keyMirror };
+
+export const INIT_STATE = {
+    "Pflanzenauswahl" : null
+};
+
 

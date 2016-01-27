@@ -20,7 +20,7 @@ const Dropdown = props =>{
     return (
         <SelectField floatingLabelText={props.label}
                      style={{width : "100%"}}
-                     onChange={onChange}>
+                     value={props.value}>
             {createWrapper(props.elements)}
         </SelectField>
     );
