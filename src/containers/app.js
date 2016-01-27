@@ -1,7 +1,7 @@
 "use strict";
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Search from '../../components/search.jsx';
+import Search from '../components/search.jsx';
 import * as SearchActions from '../actions/searchAction.js';
 
 function mapStateToProps(state) {

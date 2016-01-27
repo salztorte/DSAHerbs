@@ -13,7 +13,8 @@ let changeDropdown = function(state = initState, action){
     let nextState = initState;
     nextState[action.id] = action.value;
 
-    return [...state, nextState];
+    console.log(JSON.stringify(nextState, null, 4));
+    return nextState;
 };
 
 

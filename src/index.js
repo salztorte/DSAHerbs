@@ -7,8 +7,8 @@ import Search from './components/search.jsx';
 import About from './components/about.jsx';
 import {db} from './database.jsx';
 import { Provider } from 'react-redux';
-import App from './state/containers/App.js';
-import configureStore from './state/store/configureStore.js'
+import App from './containers/App.js';
+import configureStore from './store/configureStore.js'
 
 const store = configureStore()
 injectTapEventPlugin();
