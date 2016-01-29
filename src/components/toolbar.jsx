@@ -8,6 +8,7 @@ import MoreVertIcon from 'material-ui/lib/svg-icons/navigation/more-vert';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 import { Link} from 'react-router';
 
+
 let style = {
     'horizontal' : 'right',
     'vertical' : 'top'
@@ -16,8 +17,8 @@ let style = {
 
 const menuIcon = <IconButton><MoreVertIcon /></IconButton>;
 const menuItems = [
-    <Link key="Search" to="/"><MenuItem primaryText="Search"/></Link>,
-    <Link key="About" to="/about"><MenuItem primaryText="About"/></Link>
+    <MenuItem key="Search" primaryText="Search" onClick={() => dispatch(routeActions.push('/'))}/>,
+    <MenuItem key="About"  primaryText="About" onClick={() => dispatch(routeActions.push('/about'))}/>
 ];
 const ContextMenu = <IconMenu iconButtonElement={menuIcon} targetOrigin={style} anchorOrigin={style}>
     {menuItems}

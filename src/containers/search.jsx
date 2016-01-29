@@ -5,7 +5,7 @@ import RaisedButton from 'material-ui/lib/raised-button';
 import { PLANTS_TYPES, POISON_TYPES, MEANS_TYPES } from '../config/constans.jsx';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as SearchActions from '../actions/search';
+import {SearchActions} from '../actions/index';
 
 
 const Search = props =>{
@@ -28,18 +28,20 @@ const Search = props =>{
     </Content>)
 };
 
+
+
 Search.propTypes = {
     values : React.PropTypes.object.isRequired,
     actions : React.PropTypes.object.isRequired
 };
 
-const mapStateToProps = (state)  =>({
-    values : state.changeDropdown.select
-});
+const mapStateToProps = (state)  => ({
+        values : state.changeDropdown.select
+    });
 
 const mapDispatchToProps = (dispatch) =>({
-        actions : bindActionCreators(SearchActions, dispatch)
-    })
+    actions : bindActionCreators(SearchActions, dispatch)
+})
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);
