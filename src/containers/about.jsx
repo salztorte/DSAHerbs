@@ -1,7 +1,8 @@
 "use strict";
 import React from "react";
-import { Content } from "./toolbar.jsx"
 import List from 'material-ui/lib/lists/list';
+import { Content } from "../components/index";
+
 
 //TODO ordentliche "textboxen" für das impresum machen
 

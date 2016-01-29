@@ -3,18 +3,20 @@ import React from 'react';
 import { render } from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Router, Route, hashHistory } from 'react-router';
-import Search from './components/search.jsx';
-import About from './components/about.jsx';
+import { Search, About} from './containers/index';
 import {db} from './database.jsx';
 import { Provider } from 'react-redux';
-//import App from './containers/App.js';
-//import Store from './store/configureStore.js'
+import configureStore from './store/configureStore.js'
+
 
 injectTapEventPlugin();
+const store = configureStore();
 db.init();
 
 render(
-        <Search />,
+    <Provider store={store}>
+        <Search />
+    </Provider>,
     document.getElementById('content'));
 
 //render(

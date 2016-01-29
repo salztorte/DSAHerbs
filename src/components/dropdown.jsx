@@ -13,14 +13,11 @@ let createWrapper = function(itemsJson){
 };
 
 const Dropdown = props =>{
-    let onChange = function(event, index, value){
-        props.onChange(props.label, value);
-    };
-
     return (
         <SelectField floatingLabelText={props.label}
                      style={{width : "100%"}}
-                     value={props.value}>
+                     value={props.value}
+                     onChange={(event, index, value)=> props.onChange(value)}>
             {createWrapper(props.elements)}
         </SelectField>
     );

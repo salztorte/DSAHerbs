@@ -1,25 +1,9 @@
+'use strict';
+import { SEARCH_ACTION as types } from "../config/constans.jsx";
 
-export const CHANGE_DROPDOWN_PLANTS = "CHANGE_DROPDOWN_PLANTS";
-export const CHANGE_DROPDOWN_POISON = "CHANGE_DROPDOWN_POISON";
-export const CHANGE_DROPDOWN_MEANS = "CHANGE_DROPDOWN_MEANS";
 
-export function changePlant(event, index, value) {
-  return {
-    type: CHANGE_DROPDOWN_PLANTS,
-    value : value
-  };
-};
+export const changePlant = (value) => ({type: types.CHANGE_DROPDOWN_PLANTS, value})
 
-export function changePoison(event, index, value) {
-  return {
-    type: CHANGE_DROPDOWN_POISON,
-    value : value
-  };
-};
+export const changePoison = (value) => ({type: types.CHANGE_DROPDOWN_POISON, value})
 
-export function changeMeans(event, index, value) {
-  return {
-    type: CHANGE_DROPDOWN_Means,
-    value : value
-  };
-};
+export const changeMeans = (value) => ({type: types.CHANGE_DROPDOWN_MEANS, value})
