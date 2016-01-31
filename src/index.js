@@ -18,7 +18,10 @@ db.init();
 render(
     <Provider store={store}>
         <div>
-            <Search />
+            <Router history={hashHistory}>
+                <Route path='/' component={Search}/>
+                <Route path="/about" component={About}/>
+            </Router>
             <DevTools />
         </div>
     </Provider>,

@@ -7,7 +7,7 @@ import IconMenu from 'material-ui/lib/menus/icon-menu';
 import MoreVertIcon from 'material-ui/lib/svg-icons/navigation/more-vert';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 import { Link} from 'react-router';
-
+import { routeActions } from 'react-router-redux'
 
 let style = {
     'horizontal' : 'right',
