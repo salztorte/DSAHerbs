@@ -1,5 +1,6 @@
 "use strict";
 import Dropdown from './dropdown.jsx';
-import { Content, Toolbar } from './toolbar.jsx';
+import { Content, ToolbarTmp } from './toolbar.jsx';
 
-export { Dropdown, Content, Toolbar }
+
+export { Dropdown, Content, ToolbarTmp }

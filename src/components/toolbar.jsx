@@ -6,25 +6,29 @@ import NavigationClose from 'material-ui/lib/svg-icons/navigation/close';
 import IconMenu from 'material-ui/lib/menus/icon-menu';
 import MoreVertIcon from 'material-ui/lib/svg-icons/navigation/more-vert';
 import MenuItem from 'material-ui/lib/menus/menu-item';
-import { Link} from 'react-router';
-import { routeActions } from 'react-router-redux'
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { routeActions } from 'react-router-redux';
+
 
 let style = {
     'horizontal': 'right',
     'vertical': 'top'
 };
 
-const Toolbar = (props, dispatch) => {
+const ToolbarTmp = (props) => {
+    //const { action } = props;
+    //console.log(action);
     const menuIcon = <IconButton><MoreVertIcon /></IconButton>;
     const menuItems = [
-        <MenuItem key="Search" primaryText="Search" onClick={() => dispatch(routeActions.push('/'))}/>,
-        <MenuItem key="About" primaryText="About" onClick={() => dispatch(routeActions.push('/about'))}/>
+        <MenuItem key="Search" primaryText="Search"/>,
+        <MenuItem key="About" primaryText="About"/>
+        //<MenuItem key="Search" primaryText="Search" onClick={() => action.push('/')}/>,
+        //<MenuItem key="About" primaryText="About" onClick={() => action.push('/about')}/>
     ];
     const ContextMenu = <IconMenu iconButtonElement={menuIcon} targetOrigin={style} anchorOrigin={style}>
         {menuItems}
     </IconMenu>
-
-
 
     return (<AppBar
             title={props.title}
@@ -33,21 +37,30 @@ const Toolbar = (props, dispatch) => {
         />
     )
 };
-Toolbar.propTypes = {
-    title: React.PropTypes.string.isRequired,
-}
+
+ToolbarTmp.propTypes = {
+    title: React.PropTypes.string.isRequired
+};
+
+const mapDispatchToProps = (dispatch) =>{
+    console.log(JSON.stringify(routeActions));
+  return  ({
+        actions: bindActionCreators(routeActions, dispatch)
+    });
+};
+
+const Toolbar = connect(mapDispatchToProps)(ToolbarTmp);
+//const Toolbar = ToolbarTmp;
 
 
-const Content = props => (
-    <div>
-        <Toolbar title={props.title}/>
-        <div style={{marginLeft : 20,marginRight : 20}}>
-            {props.children}
-        </div>
+const Content = props => (<div>
+    <ToolbarTmp title={props.title}/>
+    <div style={{marginLeft : 20,marginRight : 20}}>
+        {props.children}
     </div>
-);
+</div>);
 Content.propTypes = {
     title: React.PropTypes.string.isRequired
-}
+};
 
 export { Content, Toolbar };
