@@ -10,28 +10,29 @@ import { Link} from 'react-router';
 import { routeActions } from 'react-router-redux'
 
 let style = {
-    'horizontal' : 'right',
-    'vertical' : 'top'
+    'horizontal': 'right',
+    'vertical': 'top'
 };
 
+const Toolbar = (props, dispatch) => {
+    const menuIcon = <IconButton><MoreVertIcon /></IconButton>;
+    const menuItems = [
+        <MenuItem key="Search" primaryText="Search" onClick={() => dispatch(routeActions.push('/'))}/>,
+        <MenuItem key="About" primaryText="About" onClick={() => dispatch(routeActions.push('/about'))}/>
+    ];
+    const ContextMenu = <IconMenu iconButtonElement={menuIcon} targetOrigin={style} anchorOrigin={style}>
+        {menuItems}
+    </IconMenu>
 
-const menuIcon = <IconButton><MoreVertIcon /></IconButton>;
-const menuItems = [
-    <MenuItem key="Search" primaryText="Search" onClick={() => dispatch(routeActions.push('/'))}/>,
-    <MenuItem key="About"  primaryText="About" onClick={() => dispatch(routeActions.push('/about'))}/>
-];
-const ContextMenu = <IconMenu iconButtonElement={menuIcon} targetOrigin={style} anchorOrigin={style}>
-    {menuItems}
-</IconMenu>
 
 
-const Toolbar = props => (
-    <AppBar
-        title={props.title}
-        showMenuIconButton={false}
-        iconElementRight={ContextMenu}
-    />
-);
+    return (<AppBar
+            title={props.title}
+            showMenuIconButton={false}
+            iconElementRight={ContextMenu}
+        />
+    )
+};
 Toolbar.propTypes = {
     title: React.PropTypes.string.isRequired,
 }
@@ -46,7 +47,7 @@ const Content = props => (
     </div>
 );
 Content.propTypes = {
-    title: React.PropTypes.string.isRequired,
+    title: React.PropTypes.string.isRequired
 }
 
 export { Content, Toolbar };
