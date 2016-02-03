@@ -8,7 +8,6 @@ import {db} from './database.jsx';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore.js'
 
-
 injectTapEventPlugin();
 const store = configureStore();
 

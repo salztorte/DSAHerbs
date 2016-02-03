@@ -1,13 +1,11 @@
 "use strict";
 import React from "react";
 import List from 'material-ui/lib/lists/list';
-import { Content } from "../components/index";
-
+import Content from './Content.jsx';
 
 //TODO ordentliche "textboxen" für das impresum machen
-
 const About = props =>(
-    <Content title="About">
+    <Content>
         <List disabled={true}>
             DSA Herps - Version 0.0
         </List>

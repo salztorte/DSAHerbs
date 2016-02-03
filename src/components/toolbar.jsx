@@ -6,58 +6,31 @@ import NavigationClose from 'material-ui/lib/svg-icons/navigation/close';
 import IconMenu from 'material-ui/lib/menus/icon-menu';
 import MoreVertIcon from 'material-ui/lib/svg-icons/navigation/more-vert';
 import MenuItem from 'material-ui/lib/menus/menu-item';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { routeActions } from 'react-router-redux';
-
 
 let style = {
-    'horizontal': 'right',
-    'vertical': 'top'
+    'horizontal' : 'right',
+    'vertical' : 'top'
 };
 
-const ToolbarTmp = (props) => {
-    const { routing } = props;
+const Toolbar = (props) =>{
+    const { routing, title } = props;
 
-    const menuIcon = <IconButton><MoreVertIcon /></IconButton>;
+
+    const menuIcon = (<IconButton><MoreVertIcon /></IconButton>);
     const menuItems = [
         <MenuItem key="Search" primaryText="Search" onClick={() => {routing.push('/')}}/>,
         <MenuItem key="About" primaryText="About" onClick={() => {routing.push('/about')}}/>
     ];
-    const ContextMenu = <IconMenu iconButtonElement={menuIcon} targetOrigin={style} anchorOrigin={style}>
+    const ContextMenu = (<IconMenu iconButtonElement={menuIcon} targetOrigin={style} anchorOrigin={style}>
         {menuItems}
-    </IconMenu>
+    </IconMenu>);
 
-    return (<AppBar
-            title={props.title}
-            showMenuIconButton={false}
-            iconElementRight={ContextMenu}
-        />
-    )
+    return (<AppBar title={title} showMenuIconButton={false} iconElementRight={ContextMenu}/>);
 };
 
-ToolbarTmp.propTypes = {
-    title: React.PropTypes.string.isRequired
+Toolbar.propTypes = {
+    title : React.PropTypes.string.isRequired,
+    routing : React.PropTypes.object.isRequired,
 };
 
-const mapStateToProps = (state) => ({
-});
-
-const mapDispatchToProps = (dispatch) =>({
-    routing: bindActionCreators(routeActions, dispatch)
-});
-
-const Toolbar = connect(mapStateToProps, mapDispatchToProps)(ToolbarTmp);
-
-
-const Content = props => (<div>
-    <ToolbarTmp title={props.title}/>
-    <div style={{marginLeft : 20,marginRight : 20}}>
-        {props.children}
-    </div>
-</div>);
-Content.propTypes = {
-    title: React.PropTypes.string.isRequired
-};
-
-export { Content, Toolbar };
+export default Toolbar;
