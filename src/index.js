@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Router, Route, hashHistory } from 'react-router';
 import { Search, About, DevTools} from './containers/index';
-import {db} from './database.jsx';
+import db from './database';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore.js'
 
@@ -12,7 +12,8 @@ injectTapEventPlugin();
 const store = configureStore();
 
 
-db.init();
+//db.init();
+//db.getValues();
 
 render(
     <Provider store={store}>

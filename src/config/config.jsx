@@ -4,7 +4,6 @@ let storeName = 'herps';
 let dbConfig = {
     'storeName': storeName,
     'schema': {
-        autoSchema: false,
         'stores': [
             {
                 'name': storeName,
