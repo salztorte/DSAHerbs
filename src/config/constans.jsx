@@ -2,10 +2,7 @@
 
 export const keyMirror = function(keys){
     let jsonObj = {};
-    keys.forEach(function(item){
-        jsonObj[item] = item;
-    });
-
+    keys.forEach(item =>{jsonObj[item] = item});
     return jsonObj;
 };
 

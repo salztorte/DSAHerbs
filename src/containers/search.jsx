@@ -1,12 +1,11 @@
 "use strict";
-import React, {PropTypes} from "react";
+import React, { PropTypes } from "react";
 import{ Dropdown } from '../components/index';
 import Content from './Content.jsx';
 import RaisedButton from 'material-ui/lib/raised-button';
 import { PLANTS_TYPES, POISON_TYPES, MEANS_TYPES } from '../config/constans.jsx';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import {SearchActions} from '../actions/index';
+import { connector } from '../tools';
 
 const Search = props => {
     const { values, actions} = props
@@ -27,7 +26,6 @@ const Search = props => {
     </Content>)
 };
 
-
 Search.propTypes = {
     values: PropTypes.object.isRequired,
     actions: PropTypes.object.isRequired
@@ -37,9 +35,9 @@ const mapStateToProps = (state) => ({
     values: state.changeDropdown.select
 });
 
-const mapDispatchToProps = (dispatch) =>({
-    actions: bindActionCreators(SearchActions, dispatch)
-});
+const actionList = {"actions": SearchActions}
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connector(mapStateToProps, actionList, Search);
+
+

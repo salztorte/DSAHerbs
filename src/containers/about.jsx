@@ -6,7 +6,7 @@ import Content from './Content.jsx';
 //TODO ordentliche "textboxen" für das impresum machen
 const About = props =>(
     <Content>
-        <List disabled={true}>
+        <List>
             DSA Herps - Version 0.0
         </List>
         <List>

@@ -1,8 +1,7 @@
 "use strict";
 import React, {PropTypes} from "react";
 import { Toolbar } from '../components/index';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import { connector } from '../tools';
 import { routeActions } from 'react-router-redux';
 
 const getTitle = function(path){
@@ -28,11 +27,11 @@ Content.propTypes = {
     routing : PropTypes.object.isRequired,
     path : PropTypes.string.isRequired
 };
-const mapDispatchToProps = (dispatch) =>({
-    routing: bindActionCreators(routeActions, dispatch)
-});
+
 const mapStateToProps = (state) => ({
     path: state.routing.location.pathname
 });
 
-export default connect(mapStateToProps,mapDispatchToProps)(Content);
+const actionList = {"routing": routeActions}
+
+export default connector(mapStateToProps,actionList, Content);
