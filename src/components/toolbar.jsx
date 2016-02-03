@@ -17,14 +17,12 @@ let style = {
 };
 
 const ToolbarTmp = (props) => {
-    //const { action } = props;
-    //console.log(action);
+    const { routing } = props;
+
     const menuIcon = <IconButton><MoreVertIcon /></IconButton>;
     const menuItems = [
-        <MenuItem key="Search" primaryText="Search"/>,
-        <MenuItem key="About" primaryText="About"/>
-        //<MenuItem key="Search" primaryText="Search" onClick={() => action.push('/')}/>,
-        //<MenuItem key="About" primaryText="About" onClick={() => action.push('/about')}/>
+        <MenuItem key="Search" primaryText="Search" onClick={() => {routing.push('/')}}/>,
+        <MenuItem key="About" primaryText="About" onClick={() => {routing.push('/about')}}/>
     ];
     const ContextMenu = <IconMenu iconButtonElement={menuIcon} targetOrigin={style} anchorOrigin={style}>
         {menuItems}
@@ -42,15 +40,14 @@ ToolbarTmp.propTypes = {
     title: React.PropTypes.string.isRequired
 };
 
-const mapDispatchToProps = (dispatch) =>{
-    console.log(JSON.stringify(routeActions));
-  return  ({
-        actions: bindActionCreators(routeActions, dispatch)
-    });
-};
+const mapStateToProps = (state) => ({
+});
 
-const Toolbar = connect(mapDispatchToProps)(ToolbarTmp);
-//const Toolbar = ToolbarTmp;
+const mapDispatchToProps = (dispatch) =>({
+    routing: bindActionCreators(routeActions, dispatch)
+});
+
+const Toolbar = connect(mapStateToProps, mapDispatchToProps)(ToolbarTmp);
 
 
 const Content = props => (<div>

@@ -6,10 +6,11 @@ import { PLANTS_TYPES, POISON_TYPES, MEANS_TYPES } from '../config/constans.jsx'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {SearchActions} from '../actions/index';
+import { routeActions } from 'react-router-redux';
 
-
-const Search = props =>{
-    const { values, actions } = props
+const Search = props => {
+    const { values, actions, routing } = props
+    console.log(routing)
 
     return (<Content title="DSAHerps">
         <Dropdown elements={PLANTS_TYPES}
@@ -24,23 +25,24 @@ const Search = props =>{
                   label={"Mittelauswahl"}
                   value={values.means}
                   onChange={actions.changeMeans}/>
-        <RaisedButton label="Suche starten" primary={true} style={{width : "100%"}}/>
+        <RaisedButton label="Suche starten" primary={true} style={{width : "100%"}}
+                      onClick={() => {routing.push('/about')}}/>
     </Content>)
 };
 
 
-
 Search.propTypes = {
-    values : React.PropTypes.object.isRequired,
-    actions : React.PropTypes.object.isRequired
+    values: React.PropTypes.object.isRequired,
+    actions: React.PropTypes.object.isRequired
 };
 
-const mapStateToProps = (state)  => ({
-        values : state.changeDropdown.select
-    });
+const mapStateToProps = (state) => ({
+    values: state.changeDropdown.select
+});
 
 const mapDispatchToProps = (dispatch) =>({
-    actions : bindActionCreators(SearchActions, dispatch)
+    actions: bindActionCreators(SearchActions, dispatch),
+    routing: bindActionCreators(routeActions, dispatch)
 });
 
 
