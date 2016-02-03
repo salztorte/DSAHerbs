@@ -1,9 +1,15 @@
 "use strict";
-import { SEARCH_ACTION, INIT_STATE} from '../config/constans.jsx';
+import { SEARCH_ACTION} from '../config/constans.jsx';
+const INIT_STATE = {
+    "select" : {
+        "plant" : null,
+        "poison" : null,
+        "means" : null
+    }
+};
 
 
 export default function changeDropdown (state = INIT_STATE, action){
-    //let nextState = Object.assign( {}, state);
     let nextState = JSON.parse(JSON.stringify(state));
 
     switch(action.type){

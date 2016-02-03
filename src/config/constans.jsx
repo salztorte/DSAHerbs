@@ -43,13 +43,7 @@ export const SEARCH_ACTION = keyMirror([
         "CHANGE_DROPDOWN_PLANTS",
         "CHANGE_DROPDOWN_POISON",
         "CHANGE_DROPDOWN_MEANS"])
-export const INIT_STATE = {
-    "select" : {
-        "plant" : null,
-        "poison" : null,
-        "means" : null
-    }
-};
+
 
 //export const INIT_STATE = {
 //    "Pflanzenauswahl" : null
