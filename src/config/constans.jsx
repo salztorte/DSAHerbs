@@ -40,7 +40,7 @@ export const OTHERS_TYPES = keyMirror(
         'Klebstoff',
         'Speziell'
     ]);
-export const SEARCH_ACTION = keyMirror(
+export const SELECT_ACTION = keyMirror(
     [
         'CHANGE_DROPDOWN_PLANTS',
         'CHANGE_DROPDOWN_POISON',

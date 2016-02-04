@@ -1,8 +1,8 @@
-import { SEARCH_ACTION} from '../config/constans.jsx';
+import { SELECT_ACTION } from '../config/constans.jsx';
 
 const INIT_STATE = {
     'select' : {
-        'plant' : null,
+        'plant' : 'Nutzpflanze',
         'poison' : null,
         'means' : null
     }
@@ -11,13 +11,13 @@ const INIT_STATE = {
 export default function changeDropdown(state = INIT_STATE, action){
     let nextState = JSON.parse(JSON.stringify(state));
     switch(action.type){
-        case SEARCH_ACTION.CHANGE_DROPDOWN_PLANTS:
+        case SELECT_ACTION.CHANGE_DROPDOWN_PLANTS:
             nextState.select.plant = action.value;
             break;
-        case SEARCH_ACTION.CHANGE_DROPDOWN_POISON:
+        case SELECT_ACTION.CHANGE_DROPDOWN_POISON:
             nextState.select.poison = action.value;
             break;
-        case SEARCH_ACTION.CHANGE_DROPDOWN_MEANS:
+        case SELECT_ACTION.CHANGE_DROPDOWN_MEANS:
             nextState.select.means = action.value;
             break;
     }

@@ -12,6 +12,7 @@ import configureStore from './store/configureStore.js';
 import About from './containers/About.jsx';
 import DevTools from './containers/DevTools.jsx';
 import Search from './containers/Search.jsx';
+import SearchResults from './containers/SearchResults.jsx';
 
 //import db from './database';
 
@@ -29,6 +30,7 @@ render(
             <Router history={hashHistory}>
                 <Route path='/' component={Search}/>
                 <Route path="/about" component={About}/>
+                <Route path="/result" component={SearchResults}/>
             </Router>
             <DevTools />
         </div>
