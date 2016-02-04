@@ -1,5 +1,3 @@
-'use strict';
-
 let storeName = 'herps';
 let dbConfig = {
     'storeName': storeName,
@@ -32,7 +30,7 @@ let dbConfig = {
     },
     'option': {
         mechanisms: ['indexeddb', 'websql', 'localstorage'], // default ordering
-        size: 2 * 1024 * 1024, // 2 MB
+        size: 2 * 1024 * 1024 // 2 MB
     }
 };
 

@@ -1,15 +1,17 @@
-"use strict";
-import React, {PropTypes} from "react";
-import { Toolbar } from '../components/index';
-import { connector } from '../tools';
+import React, { PropTypes } from 'react';
 import { routeActions } from 'react-router-redux';
 
+import Toolbar  from '../components/toolbar.jsx';
+import { connector } from '../tools';
+
 const getTitle = function(path){
-    switch (path){
-        case "/":
-            return "DSAHerps";
-        case "/about":
-            return "About";
+    switch(path){
+        case '/':
+            return 'DSAHerps';
+        case '/about':
+            return 'About';
+        case '/result':
+            return 'Ergebnis';
     }
 };
 
@@ -29,9 +31,9 @@ Content.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-    path: state.routing.location.pathname
+    path : state.routing.location.pathname
 });
 
-const actionList = {"routing": routeActions}
+const actionList = {'routing' : routeActions};
 
-export default connector(mapStateToProps,actionList, Content);
+export default connector(mapStateToProps, actionList)(Content);

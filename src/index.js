@@ -1,12 +1,20 @@
-"use strict";
+//React
 import React from 'react';
 import { render } from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import { Router, Route, hashHistory } from 'react-router';
-import { Search, About, DevTools} from './containers/index';
-import db from './database';
+
+//Redux / Router
 import { Provider } from 'react-redux';
-import configureStore from './store/configureStore.js'
+import { Router, Route, hashHistory } from 'react-router';
+import configureStore from './store/configureStore.js';
+
+//Components
+import About from './containers/About.jsx';
+import DevTools from './containers/DevTools.jsx';
+import Search from './containers/Search.jsx';
+
+//import db from './database';
+
 
 injectTapEventPlugin();
 const store = configureStore();
@@ -26,10 +34,3 @@ render(
         </div>
     </Provider>,
     document.getElementById('content'));
-
-//render(
-//    <Router history={hashHistory}>
-//        <Route path='/' component={Search} />
-//        <Route path="/about" component={About}/>
-//    </Router>,
-//    document.getElementById('content'));

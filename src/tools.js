@@ -1,4 +1,3 @@
-"use strict";
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
@@ -10,6 +9,6 @@ const dispatchMapper = list => dispatch =>{
     return map;
 };
 
-export const connector = function(listState, listDispatch, component){
-    return connect(listState, dispatchMapper(listDispatch))(component);
-}
+export const connector = function(listState, listDispatch){
+    return connect(listState, dispatchMapper(listDispatch));
+};

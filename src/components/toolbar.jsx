@@ -1,8 +1,6 @@
-"use strict";
-import React from "react";
+import React from 'react';
 import AppBar from 'material-ui/lib/app-bar';
 import IconButton from 'material-ui/lib/icon-button';
-import NavigationClose from 'material-ui/lib/svg-icons/navigation/close';
 import IconMenu from 'material-ui/lib/menus/icon-menu';
 import MoreVertIcon from 'material-ui/lib/svg-icons/navigation/more-vert';
 import MenuItem from 'material-ui/lib/menus/menu-item';
@@ -18,8 +16,8 @@ const Toolbar = (props) =>{
 
     const menuIcon = (<IconButton><MoreVertIcon /></IconButton>);
     const menuItems = [
-        <MenuItem key="Search" primaryText="Search" onClick={() => {routing.push('/')}}/>,
-        <MenuItem key="About" primaryText="About" onClick={() => {routing.push('/about')}}/>
+        <MenuItem key="Search" primaryText="Search" onClick={() => {routing.push('/');}}/>,
+        <MenuItem key="About" primaryText="About" onClick={() => {routing.push('/about');}}/>
     ];
     const ContextMenu = (<IconMenu iconButtonElement={menuIcon} targetOrigin={style} anchorOrigin={style}>
         {menuItems}
@@ -30,7 +28,7 @@ const Toolbar = (props) =>{
 
 Toolbar.propTypes = {
     title : React.PropTypes.string.isRequired,
-    routing : React.PropTypes.object.isRequired,
+    routing : React.PropTypes.object.isRequired
 };
 
 export default Toolbar;

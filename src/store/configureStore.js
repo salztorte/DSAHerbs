@@ -1,9 +1,10 @@
-"use strict";
-import { applyMiddleware, compose, createStore, combineReducers } from 'redux'
+import { applyMiddleware, compose, createStore } from 'redux';
+import { hashHistory } from 'react-router';
+import { syncHistory } from 'react-router-redux';
+
 import rootReducer from '../reducers/reducer.js';
-import { DevTools } from "../containers/index.js";
-import { hashHistory } from 'react-router'
-import { syncHistory } from 'react-router-redux'
+import DevTools from '../containers/DevTools.jsx';
+
 
 const reduxRouterMiddleware = syncHistory(hashHistory);
 
