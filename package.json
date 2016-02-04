@@ -1,55 +1,55 @@
 {
-  "name": "DSAHerps",
-  "version": "0.0.1",
-  "private": true,
-  "readme": "README.md",
-  "description": "Ein Fanprojekt zu 'Das Schwarze Auge'",
-  "main": "",
-  "scripts": {
-    "test": "mocha --recursive --compilers js:babel-core/register",
-    "test:watch": "npm run test -- --watch",
-    "bundel": "./node_modules/.bin/webpack --progress --profile --colors",
-    "bundel:watch": "npm run bundel -- --watch"
+  "name" : "DSAHerps",
+  "version" : "0.0.1",
+  "private" : true,
+  "readme" : "README.md",
+  "description" : "Ein Fanprojekt zu 'Das Schwarze Auge'",
+  "main" : "",
+  "scripts" : {
+    "test" : "mocha --recursive --compilers js:babel-core/register",
+    "test:watch" : "npm run test -- --watch",
+    "bundel" : "./node_modules/.bin/webpack --progress --profile --colors",
+    "bundel:watch" : "npm run bundel -- --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/salztorte/DSAHerps.git"
+  "repository" : {
+    "type" : "git",
+    "url" : "git+https://github.com/salztorte/DSAHerps.git"
   },
-  "keywords": [],
-  "author": "Oliver Franzen",
-  "license": "LGPL",
-  "bugs": {
-    "url": "https://github.com/salztorte/DSAHerps/issues"
+  "keywords" : [],
+  "author" : "Oliver Franzen",
+  "license" : "LGPL",
+  "bugs" : {
+    "url" : "https://github.com/salztorte/DSAHerps/issues"
   },
-  "homepage": "https://github.com/salztorte/DSAHerps#readme",
-  "dependencies": {
-    "material-ui": "^0.14.2",
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6",
-    "react-router": "^2.0.0-rc5",
-    "react-tap-event-plugin": "^0.2.1",
-    "redux": "^3.0.6",
-    "react-redux": "^4.0.6",
-    "react-router-redux": "^2.1.0",
-    "ydn.db": "^1.3.0"
+  "homepage" : "https://github.com/salztorte/DSAHerps#readme",
+  "dependencies" : {
+    "material-ui" : "^0.14.2",
+    "react" : "^0.14.6",
+    "react-dom" : "^0.14.6",
+    "react-router" : "^2.0.0-rc5",
+    "react-tap-event-plugin" : "^0.2.1",
+    "redux" : "^3.0.6",
+    "react-redux" : "^4.0.6",
+    "react-router-redux" : "^2.1.0",
+    "ydn.db" : "^1.3.0"
   },
-  "devDependencies": {
-    "babel-core": "^6.0.12",
-    "babel-loader": "^6.0.1",
-    "babel-plugin-react-transform": "^1.1.0",
-    "babel-plugin-transform-object-assign": "^6.3.13",
-    "babel-plugin-transform-react-jsx": "^6.4.0",
-    "babel-preset-es2015": "^6.0.12",
-    "babel-preset-react": "^6.0.15",
-    "eslint": "^1.10.3",
-    "eslint-plugin-react": "^3.16.1",
-    "expect": "^1.13.4",
-    "jsdom": "^5.6.1",
-    "mocha": "^2.2.5",
-    "react-addons-test-utils": "^0.14.6",
-    "redux-devtools": "^3.0.2",
-    "redux-devtools-dock-monitor": "^1.0.1",
-    "redux-devtools-log-monitor": "^1.0.2",
-    "webpack": "^1.12.11"
+  "devDependencies" : {
+    "eslint" : "^1.10.3",
+    "eslint-plugin-react" : "^3.16.1",
+    "expect" : "^1.13.4",
+    "jsdom" : "^5.6.1",
+    "mocha" : "^2.2.5",
+    "react-addons-test-utils" : "^0.14.6",
+    "redux-devtools" : "^3.0.2",
+    "redux-devtools-dock-monitor" : "^1.0.1",
+    "redux-devtools-log-monitor" : "^1.0.2",
+    "babel-core" : "^6.0.12",
+    "babel-loader" : "^6.0.1",
+    "babel-plugin-react-transform" : "^1.1.0",
+    "babel-plugin-transform-object-assign" : "^6.3.13",
+    "babel-plugin-transform-react-jsx" : "^6.4.0",
+    "babel-preset-es2015" : "^6.0.12",
+    "babel-preset-react" : "^6.0.15",
+    "webpack" : "^1.12.11"
   }
 }
