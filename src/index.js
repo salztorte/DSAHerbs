@@ -2,12 +2,12 @@
 //React
 import React from 'react';
 import { render } from 'react-dom';
-//import injectTapEventPlugin from 'react-tap-event-plugin';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 //Redux / Router
-//import { Provider } from 'react-redux';
-//import { Router, Route, hashHistory } from 'react-router';
-//import configureStore from './store/configureStore.js';
+import { Provider } from 'react-redux';
+import { Router, Route, hashHistory } from 'react-router';
+import configureStore from './store/configureStore.js';
 
 //Components
 import About from './containers/About.jsx';
