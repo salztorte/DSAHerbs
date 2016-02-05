@@ -2,12 +2,12 @@ import React from 'react';
 
 import List from 'material-ui/lib/lists/list';
 
-import Content from './Content.jsx';
+//import Content from './Content.jsx';
 
 
 //TODO ordentliche 'textboxen' für das impresum machen
 const About = () =>(
-    <Content>
+    <div>
         <List>
             DSA Herps - Version 0.0
         </List>
@@ -17,9 +17,11 @@ const About = () =>(
         <List>
             Kontakt : <a href='mailto:salztorte92@gmail.com'>salztorte92@gmail.com</a>
         </List>
-    </Content>
+    </div>
 );
 About.propTypes = {};
 
+
+//<Content></Content>
 
 export default About;
