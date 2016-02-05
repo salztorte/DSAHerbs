@@ -8,8 +8,7 @@
   "scripts": {
     "test": "mocha --recursive --compilers js:babel-core/register",
     "test:watch": "npm run test -- --watch",
-    "bundel": "./node_modules/.bin/webpack --progress --profile --colors",
-    "bundel:watch": "npm run bundel -- --watch"
+    "build-redux": "rollup -c rollup.redux.config.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +33,8 @@
     "ydn.db": "^1.3.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
     "babel-preset-es2015-rollup": "^1.1.1",
     "babel-preset-react": "^6.3.13",
     "eslint": "^1.10.3",
