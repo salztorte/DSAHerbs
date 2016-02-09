@@ -5,13 +5,10 @@ import commonjs from 'rollup-plugin-commonjs';
 import npm from 'rollup-plugin-npm';
 import replace from 'rollup-plugin-replace';
 
-
 let babelrc = JSON.parse(fs.readFileSync('.babelrc', 'utf8'));
 babelrc.babelrc = false;
 
-
-
-const config =  {
+const config = {
     entry : 'src/index.js',
     dest : 'www/build/bundle.js',
     format : 'iife',
@@ -22,7 +19,7 @@ const config =  {
                 }),
         npm({jsnext : true, main : true}),
         commonjs({
-                     include: ['node_modules/**'],
+                     include : ['node_modules/**'],
                      namedExports : {
                          'node_modules/react/react.js' : ['Component', 'Children', 'createElement', 'PropTypes'],
                          'node_modules/react-dom/index.js' : ['render'],
