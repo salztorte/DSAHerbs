@@ -2,3 +2,6 @@
     Suchefunction implementieren
 - Such ergebnisse Darstellen
 - Kräuterdaten aus den Büchern in das Json schreiben.
+
+
+kleiner rollup/ redux hack: das objekt nochmal kopieren und mit default exporten

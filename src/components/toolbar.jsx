@@ -16,9 +16,13 @@ const Toolbar = (props) =>{
 
     const menuIcon = (<IconButton><MoreVertIcon /></IconButton>);
     const menuItems = [
-        <MenuItem key="Search" primaryText="Search" onClick={() => {routing.push('/');}}/>,
-        <MenuItem key="About" primaryText="About" onClick={() => {routing.push('/about');}}/>
+        <MenuItem key="Search" primaryText="Search"/>,
+        <MenuItem key="About" primaryText="About"/>
     ];
+    //const menuItems = [
+    //    <MenuItem key="Search" primaryText="Search" onClick={() => {routing.push('/');}}/>,
+    //    <MenuItem key="About" primaryText="About" onClick={() => {routing.push('/about');}}/>
+    //];
     const ContextMenu = (<IconMenu iconButtonElement={menuIcon} targetOrigin={style} anchorOrigin={style}>
         {menuItems}
     </IconMenu>);
@@ -28,7 +32,7 @@ const Toolbar = (props) =>{
 
 Toolbar.propTypes = {
     title : React.PropTypes.string.isRequired,
-    routing : React.PropTypes.object.isRequired
+    //routing : React.PropTypes.object.isRequired
 };
 
 export default Toolbar;

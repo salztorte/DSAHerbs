@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { routeActions } from 'react-router-redux';
+//import { routeActions } from 'react-router-redux';
 
 import RaisedButton from 'material-ui/lib/raised-button';
 
@@ -25,9 +25,12 @@ const Search = props =>{
                   label={'Mittelauswahl'}
                   value={values.means}
                   onChange={select.changeMeans}/>
-        <RaisedButton label='Suche starten' primary={true} style={{width : '100%'}} onClick={() => {routing.push('/result');}}/>
+
+        <RaisedButton label='Suche starten' primary={true} style={{width : '100%'}}/>
     </Content>);
 };
+
+//<RaisedButton label='Suche starten' primary={true} style={{width : '100%'}} onClick={() => {routing.push('/result');}}/>
 
 Search.propTypes = {
     values : PropTypes.object.isRequired,
@@ -39,8 +42,8 @@ const mapStateToProps = (state) => ({
 });
 
 const actionList = {
-    'select' : SelectActions,
-    'routing' : routeActions
+    'select' : SelectActions
+    //'routing' : routeActions
 };
 
 export default connector(mapStateToProps, actionList)(Search);
