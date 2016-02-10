@@ -24,6 +24,6 @@
     "react"
   ],
   "globals": {
-    "PouchDB": true
+    "ydn": true
   }
 }

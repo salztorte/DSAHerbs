@@ -4,7 +4,7 @@ import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import npm from 'rollup-plugin-npm';
 import replace from 'rollup-plugin-replace';
-import uglify from 'rollup-plugin-uglify';
+//import uglify from 'rollup-plugin-uglify';
 
 let babelrc = JSON.parse(fs.readFileSync('.babelrc', 'utf8'));
 babelrc.presets[babelrc.presets.indexOf('es2015')] = 'es2015-rollup';
@@ -28,8 +28,7 @@ const config = {
                 'node_modules/redux-devtools/lib/index.js': ['createDevTools']
             }
         }),
-        babel(babelrc),
-        uglify()
+        babel(babelrc)
     ]
 };
 

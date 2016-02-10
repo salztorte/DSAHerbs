@@ -6,14 +6,15 @@
   "description": "Ein Fanprojekt zu 'Das Schwarze Auge'",
   "main": "",
   "jsnext:main": "./src/index.js",
-  "bin" : "./node_modules/.bin",
+  "bin": "./node_modules/.bin",
   "scripts": {
+    "postinstall": "node ./scripts/postInstall.js",
     "test": "mocha --compilers js:babel-core/register --recursive",
     "test:watch": "npm run test -- --watch",
-    "prebuild": "node ./scripts/rollupWorkarounds.js && npm run lint",
-    "build": "node node_modules/rollup/bin/rollup -c",
+    "prebuild": "npm run lint",
+    "build": "rollup -c",
     "build:watch": "echo 'Error: no buildwatch specified' && exit 1",
-    "lint" : "eslint --ignore-path .eslintignore -c .eslintrc.json . --fix "
+    "lint": "eslint --ignore-path .eslintignore -c .eslintrc.json . --fix "
   },
   "repository": {
     "type": "git",
@@ -28,14 +29,14 @@
   "homepage": "https://github.com/salztorte/DSAHerps#readme",
   "dependencies": {
     "material-ui": "^0.14.2",
-    "pouchdb": "^5.2.1",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-redux": "^4.0.6",
     "react-router": "^2.0.0-rc5",
     "react-router-redux": "^2.1.0",
     "react-tap-event-plugin": "^0.2.1",
-    "redux": "^3.0.6"
+    "redux": "^3.0.6",
+    "ydn.db": "^1.3.0"
   },
   "devDependencies": {
     "babel-plugin-transform-object-assign": "^6.5.0",

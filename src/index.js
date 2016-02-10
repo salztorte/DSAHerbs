@@ -13,21 +13,12 @@ import About from './containers/About.jsx';
 import Search from './containers/Search.jsx';
 import SearchResults from './containers/SearchResults.jsx';
 import db from './database';
-db();
 
 injectTapEventPlugin();
 const store = configureStore();
 
-
-//db.init();
-//db.getValues();
-//
-//render(
-//    <Provider store={store}>
-//        <Search />
-//    </Provider>,
-//    document.getElementById('content')
-//);
+db.init();
+db.getValues();
 
 render(
     <Provider store={store}>
@@ -39,4 +30,5 @@ render(
             </Router>
         </div>
     </Provider>,
-    document.getElementById('content'));
+    document.getElementById('content')
+);
