@@ -1,16 +1,15 @@
-"use strict";
-import expect from 'expect'
-import React from 'react'
-import TestUtils from 'react-addons-test-utils'
+import expect from 'expect';
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
 
 import Dropdown from '../../src/components/dropdown.jsx';
 
 
-const setup = ()=>{
+const setup = ()=> {
     let props = {
-        label : "Test",
-        elements : {"Das":"Das", "ist":"ist", "ein":"ein", "Test":"Test"},
-        onChange : expect.createSpy()
+        label: 'Test',
+        elements: {'Das': 'Das', 'ist': 'ist', 'ein': 'ein', 'Test': 'Test'},
+        onChange: expect.createSpy()
     };
 
     let renderer = TestUtils.createRenderer();
@@ -24,14 +23,14 @@ const setup = ()=>{
 describe('components', () => {
     describe('Dropdown', () => {
 
-        it('should render correctly', ()=>{
+        it('should render correctly', ()=> {
             const { output, props } = setup();
 
             expect(output.type.displayName).toBe('SelectField');
             expect(output.props.children.length).toBe(Object.keys(props.elements).length + 1);
 
-            expect(output.props.children[1].type.displayName).toBe("MenuItem");
-            expect(output.props.children[1].props.primaryText).toBe("Das");
+            expect(output.props.children[1].type.displayName).toBe('MenuItem');
+            expect(output.props.children[1].props.primaryText).toBe('Das');
 
 
         });

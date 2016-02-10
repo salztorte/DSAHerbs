@@ -1,14 +1,14 @@
-import expect from 'expect'
-import React from 'react'
-import TestUtils from 'react-addons-test-utils'
+import expect from 'expect';
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
 
 import Toolbar from '../../src/components/toolbar.jsx';
 
-const setup = ()=>{
-    let props ={
-        title : "Test",
-        routing:{
-            push : expect.createSpy()
+const setup = ()=> {
+    let props = {
+        title: 'Test',
+        routing: {
+            push: expect.createSpy()
         }
     };
 
@@ -23,7 +23,7 @@ const setup = ()=>{
 describe('components', () => {
 
     describe('Toolbar', () => {
-        it('should render correctly', () =>{
+        it('should render correctly', () => {
             const { output } = setup();
 
             expect(output.type.displayName).toBe('AppBar');

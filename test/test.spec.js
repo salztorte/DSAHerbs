@@ -1,19 +1,18 @@
-"use strict";
 import expect from 'expect';
 
-describe("tests", function(){
-    it("should test", function(){
+describe('tests', function(){
+    it('should test', function(){
         expect(1).toBe(1);
     });
 
-    it("should be able to write to console", function(){
+    it('should be able to write to console', function(){
         expect(console).toNotBe(null);
-        console.log("ConsoleTest", "Hello World!");
+        console.log('ConsoleTest', 'Hello World!');
     });
 });
 
-describe("JavaScript", function(){
-    it("should be able to write to typed Arrays given by val", function(){
+describe('JavaScript', function(){
+    it('should be able to write to typed Arrays given by val', function(){
         function changeArray(buffer){
             buffer[0] = 1;
             buffer[1] = 2;

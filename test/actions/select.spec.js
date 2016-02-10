@@ -4,7 +4,7 @@ import {SELECT_ACTION as types} from '../../src/config/constans';
 
 describe('select action', () => {
     it('should create an action to change plants', () => {
-        const value = 'Tunin'
+        const value = 'Tunin';
         const expectedAction = {
             type: types.CHANGE_DROPDOWN_PLANTS,
             value
@@ -14,7 +14,7 @@ describe('select action', () => {
     });
 
     it('should create an action to change poison', () => {
-        const value = 'Tunin'
+        const value = 'Tunin';
         const expectedAction = {
             type: types.CHANGE_DROPDOWN_POISON,
             value
@@ -25,7 +25,7 @@ describe('select action', () => {
 
 
     it('should create an action to change means', () => {
-        const value = 'Tunin'
+        const value = 'Tunin';
         const expectedAction = {
             type: types.CHANGE_DROPDOWN_MEANS,
             value

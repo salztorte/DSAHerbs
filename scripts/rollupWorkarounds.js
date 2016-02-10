@@ -1,6 +1,5 @@
 var fs = require('fs');
 
-
 var reactRouterWA = function(){
     var reactRouterPath = 'node_modules/react-router/package.json';
     var routerPjson = JSON.parse(fs.readFileSync(reactRouterPath, 'utf8'));
