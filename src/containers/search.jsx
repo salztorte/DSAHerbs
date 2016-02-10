@@ -10,7 +10,7 @@ import { PLANTS_TYPES, POISON_TYPES, MEANS_TYPES } from '../config/constans';
 import * as SelectActions from '../actions/select';
 import { connector } from '../tools';
 
-const Search = props =>{
+const Search = props => {
     const { values, select, routing} = props;
     return (<Content>
         <Dropdown elements={PLANTS_TYPES}
@@ -26,24 +26,24 @@ const Search = props =>{
                   value={values.means}
                   onChange={select.changeMeans}/>
 
-        <RaisedButton label='Suche starten' primary={true} style={{width : '100%'}} onClick={() => {routing.push('/result');}}/>
+        <RaisedButton label='Suche starten' primary={true} style={{width : '100%'}}
+                      onClick={() => {routing.push('/result');}}/>
     </Content>);
 };
 
 
-
 Search.propTypes = {
-    values : PropTypes.object.isRequired,
-    select : PropTypes.object.isRequired
+    values: PropTypes.object.isRequired,
+    select: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => ({
-    values : state.changeDropdown
+    values: state.changeDropdown
 });
 
 const actionList = {
-    'select' : SelectActions,
-    'routing' : routeActions
+    'select': SelectActions,
+    'routing': routeActions
 };
 
 export default connector(mapStateToProps, actionList)(Search);

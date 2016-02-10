@@ -1,16 +1,12 @@
 //import { dbConfig } from './config/config.jsx';
 //import {herps} from './config/herbarium.jsx';
-////import * as ydn from '../node_modules/ydn.db/jsc/ydn.db-dev'
-//let ydn = ydn || {};
-//ydn.db = require('../node_modules/ydn.db/jsc/ydn.db-isw-core-crypt-qry-dev');
-//
-//
-//console.log(JSON.stringify(ydn.db.Storage));
-//
-//
 //let storeName = dbConfig.storeName;
-//let dbStore = new ydn.db.Storage('dbherps', dbConfig.schema, dbConfig.option);
-//
+let dbStore = new PouchDB('todos');
+
+let db = () => {
+    console.log(dbStore);
+};
+
 //let db = new function () {
 //    this.init = function () {
 //        herps.forEach(function (herp) {
@@ -30,5 +26,5 @@
 ////        });
 ////    }
 //};
-//
-//export default db;
+
+export default db;

@@ -13,7 +13,7 @@ import About from './containers/About.jsx';
 import Search from './containers/Search.jsx';
 import SearchResults from './containers/SearchResults.jsx';
 import db from './database';
-
+db();
 
 injectTapEventPlugin();
 const store = configureStore();
