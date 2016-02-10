@@ -6,7 +6,7 @@ import RaisedButton from 'material-ui/lib/raised-button';
 import Dropdown from '../components/dropdown.jsx';
 import Content from './Content.jsx';
 
-import { PLANTS_TYPES, POISON_TYPES, MEANS_TYPES } from '../config/constans.jsx';
+import { PLANTS_TYPES, POISON_TYPES, MEANS_TYPES } from '../config/constans';
 import * as SelectActions from '../actions/select';
 import { connector } from '../tools';
 
@@ -38,7 +38,7 @@ Search.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-    values : state.changeDropdown.select
+    values : state.changeDropdown
 });
 
 const actionList = {

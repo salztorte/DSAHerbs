@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 import SelectField from 'material-ui/lib/select-field';
 
@@ -21,8 +21,9 @@ const Dropdown = props =>(
 );
 
 Dropdown.propTypes = {
-    label: React.PropTypes.string.isRequired,
-    elements: React.PropTypes.objectOf(React.PropTypes.string)
+    label: PropTypes.string.isRequired,
+    elements: PropTypes.objectOf(React.PropTypes.string),
+    onChange: PropTypes.func.isRequired
 };
 
 export default Dropdown;

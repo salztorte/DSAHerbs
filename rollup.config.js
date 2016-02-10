@@ -6,6 +6,7 @@ import npm from 'rollup-plugin-npm';
 import replace from 'rollup-plugin-replace';
 
 let babelrc = JSON.parse(fs.readFileSync('.babelrc', 'utf8'));
+babelrc.presets[babelrc.presets.indexOf('es2015')] = 'es2015-rollup';
 babelrc.babelrc = false;
 
 const config = {

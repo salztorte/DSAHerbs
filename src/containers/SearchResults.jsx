@@ -1,9 +1,7 @@
 import React, { PropTypes } from 'react';
 import Content from './Content.jsx';
-//import { connector } from '../tools';
+import { connector } from '../tools';
 
-
-//const SearchResults = props =>{
 const SearchResults = () =>{
     return (<Content>
     </Content>);
@@ -12,10 +10,9 @@ const SearchResults = () =>{
 
 SearchResults.propTypes ={};
 
-//const mapStateToProps = (state) => ({
-//});
-//
-//const actionList = {};
-//connector(mapStateToProps, actionList)
+const mapStateToProps = (state) => ({
+});
 
-export default (SearchResults);
+const actionList = {};
+
+export default connector(mapStateToProps, actionList)(SearchResults);

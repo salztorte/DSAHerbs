@@ -3,7 +3,7 @@
  * Created by Oliver on 22.01.2016.
  */
 import expect from 'expect';
-import {keyMirror} from '../src/config/constans.jsx'
+import {keyMirror} from '../src/config/constans'
 
 describe("tests keyMirror", function() {
     it("should create a Json ou of Array", function(){

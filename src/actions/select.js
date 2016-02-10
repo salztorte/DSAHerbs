@@ -1,4 +1,4 @@
-import { SELECT_ACTION as types } from '../config/constans.jsx';
+import { SELECT_ACTION as types } from '../config/constans';
 
 export const changePlant = (value) => ({type: types.CHANGE_DROPDOWN_PLANTS, value});
 

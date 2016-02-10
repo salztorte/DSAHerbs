@@ -1,4 +1,4 @@
-import { PLANTS_TYPES , POISON_TYPES , MEANS_TYPES , OTHERS_TYPES } from './constans.jsx';
+import { PLANTS_TYPES , POISON_TYPES , MEANS_TYPES , OTHERS_TYPES } from './constans';
 
 let herps = [
     {
