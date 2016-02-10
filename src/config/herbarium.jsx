@@ -1,5 +1,5 @@
-import { PLANTS_TYPES , POISON_TYPES , MEANS_TYPES , OTHERS_TYPES } from './constans';
-
+import { PLANTS_TYPES, MEANS_TYPES  } from './constans';
+//OTHERS_TYPES , POISON_TYPES
 let herps = [
     {
         'Name' : 'Alraune',

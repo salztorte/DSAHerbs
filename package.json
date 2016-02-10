@@ -6,12 +6,14 @@
   "description": "Ein Fanprojekt zu 'Das Schwarze Auge'",
   "main": "",
   "jsnext:main": "./src/index.js",
+  "bin" : "./node_modules/.bin",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --recursive",
     "test:watch": "npm run test -- --watch",
-    "prebuild": "node ./scripts/rollupWorkarounds.js",
-    "build": "node ./node_modules/rollup/bin/rollup -c",
-    "build:watch": "echo 'Error: no buildwatch specified' && exit 1"
+    "prebuild": "node ./scripts/rollupWorkarounds.js && npm run lint",
+    "build": "node node_modules/rollup/bin/rollup -c",
+    "build:watch": "echo 'Error: no buildwatch specified' && exit 1",
+    "lint" : "eslint --ignore-path .eslintignore -c .eslintrc.json . --fix "
   },
   "repository": {
     "type": "git",

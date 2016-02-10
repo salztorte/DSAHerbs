@@ -34,4 +34,4 @@ describe('select action', () => {
         expect(actions.changeMeans(value)).toEqual(expectedAction);
     });
 
-})
+});
