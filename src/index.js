@@ -22,22 +22,21 @@ const store = configureStore();
 //db.init();
 //db.getValues();
 //
-render(
-    <Provider store={store}>
-        <Search />
-    </Provider>,
-    document.getElementById('content')
-);
-
 //render(
 //    <Provider store={store}>
-//        <div>
-//            <Router history={hashHistory}>
-//                <Route path='/' component={Search}/>
-//                <Route path="/about" component={About}/>
-//                <Route path="/result" component={SearchResults}/>
-//            </Router>
-//            <DevTools />
-//        </div>
+//        <Search />
 //    </Provider>,
-//    document.getElementById('content'));
+//    document.getElementById('content')
+//);
+
+render(
+    <Provider store={store}>
+        <div>
+            <Router history={hashHistory}>
+                <Route path='/' component={Search}/>
+                <Route path="/about" component={About}/>
+                <Route path="/result" component={SearchResults}/>
+            </Router>
+        </div>
+    </Provider>,
+    document.getElementById('content'));
