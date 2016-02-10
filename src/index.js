@@ -5,15 +5,14 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 
 //Redux / Router
 import { Provider } from 'react-redux';
-//import { Router, Route, hashHistory } from 'react-router';
+import { Router, Route, hashHistory } from 'react-router';
 import configureStore from './store/configureStore.js';
 
 //Components
 import About from './containers/About.jsx';
-//import DevTools from './containers/DevTools.jsx';
 import Search from './containers/Search.jsx';
 import SearchResults from './containers/SearchResults.jsx';
-//import db from './database';
+import db from './database';
 
 
 injectTapEventPlugin();
@@ -22,7 +21,7 @@ const store = configureStore();
 
 //db.init();
 //db.getValues();
-
+//
 render(
     <Provider store={store}>
         <Search />
