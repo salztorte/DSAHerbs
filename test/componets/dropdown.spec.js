@@ -1,12 +1,14 @@
-import expect from 'expect';
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+
+import expect from 'expect';
 
 import Dropdown from '../../src/components/dropdown.jsx';
+import TestUtils from 'react-addons-test-utils';
 
+import MenuItem from 'material-ui/lib/menus/menu-item';
 
 const setup = ()=> {
-    let props = {
+    const props = {
         label: 'Test',
         elements: {'Das': 'Das', 'ist': 'ist', 'ein': 'ein', 'Test': 'Test'},
         onChange: expect.createSpy()
@@ -31,7 +33,6 @@ describe('components', () => {
 
             expect(output.props.children[1].type.displayName).toBe('MenuItem');
             expect(output.props.children[1].props.primaryText).toBe('Das');
-
 
         });
 

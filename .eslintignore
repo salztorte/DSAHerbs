@@ -1,3 +1,4 @@
 *.config.js
 ./www/**/*.*
 node_modules
+scripts
