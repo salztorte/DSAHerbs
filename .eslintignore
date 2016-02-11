@@ -1,5 +1,7 @@
-*.config.js
+*.conf*.js
+
 ./www/**/*.*
 node_modules
 scripts
 test
+

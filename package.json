@@ -50,8 +50,6 @@
     "chai-spies": "^0.7.1",
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.16.1",
-    "fs-readdir-recursive": "^1.0.0",
-    "jsdom": "^5.6.1",
     "mocha": "^2.2.5",
     "react-addons-test-utils": "^0.14.6",
     "rollup": "^0.25.3",
