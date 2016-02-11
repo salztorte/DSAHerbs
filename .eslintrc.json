@@ -3,7 +3,7 @@
     "indent" : [2, 4, {"SwitchCase": 1}],
     "quotes" : [2, "single"],
     "semi" : [2, "always"],
-    "strict" : [2, "global"],
+    "strict" : [2, "function"],
     "no-console": 0,
     "no-undefined": 0,
     "no-unused-vars": [2, {"vars": "all", "args": "after-used", "varsIgnorePattern":"React"}]

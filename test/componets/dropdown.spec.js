@@ -1,17 +1,18 @@
+import chai, { should }from 'chai';
+import spies from 'chai-spies';
+chai.use(spies);
+should();
+
 import React from 'react';
-
-import expect from 'expect';
-
-import Dropdown from '../../src/components/dropdown.jsx';
 import TestUtils from 'react-addons-test-utils';
 
-import MenuItem from 'material-ui/lib/menus/menu-item';
+import Dropdown from '../../src/components/dropdown.jsx';
 
 const setup = ()=> {
     const props = {
         label: 'Test',
         elements: {'Das': 'Das', 'ist': 'ist', 'ein': 'ein', 'Test': 'Test'},
-        onChange: expect.createSpy()
+        onChange: chai.spy()
     };
 
     let renderer = TestUtils.createRenderer();
@@ -22,17 +23,17 @@ const setup = ()=> {
 
 };
 
-describe('components', () => {
+
     describe('Dropdown', () => {
 
         it('should render correctly', ()=> {
             const { output, props } = setup();
 
-            expect(output.type.displayName).toBe('SelectField');
-            expect(output.props.children.length).toBe(Object.keys(props.elements).length + 1);
+            output.type.displayName.should.be.equal('SelectField');
+            output.props.children.length.should.be.equal(Object.keys(props.elements).length + 1);
 
-            expect(output.props.children[1].type.displayName).toBe('MenuItem');
-            expect(output.props.children[1].props.primaryText).toBe('Das');
+            output.props.children[1].type.displayName.should.be.equal('MenuItem');
+            output.props.children[1].props.primaryText.should.be.equal('Das');
 
         });
 
@@ -40,8 +41,7 @@ describe('components', () => {
             const { output, props } = setup();
 
             output.props.onChange(null, null, 'Tunin');
-            expect(props.onChange).toHaveBeenCalledWith('Tunin');
+            props.onChange.should.have.been.called.with('Tunin');
         });
 
     });
-});

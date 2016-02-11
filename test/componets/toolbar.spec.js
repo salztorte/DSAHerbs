@@ -1,4 +1,8 @@
-import expect from 'expect';
+import chai, { should }from 'chai';
+import spies from 'chai-spies';
+chai.use(spies);
+should();
+
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 
@@ -8,7 +12,7 @@ const setup = ()=> {
     let props = {
         title: 'Test',
         routing: {
-            push: expect.createSpy()
+            push: chai.spy()
         }
     };
 
@@ -20,20 +24,19 @@ const setup = ()=> {
 };
 
 
-describe('components', () => {
 
     describe('Toolbar', () => {
         it('should render correctly', () => {
             const { output } = setup();
 
-            expect(output.type.displayName).toBe('AppBar');
+            output.type.displayName.should.to.equal('AppBar');
 
             const iconElementRight = output.props.iconElementRight;
-            expect(iconElementRight.type.displayName).toBe('IconMenu');
-            expect(iconElementRight.props.children.length).toBe(2);
+            iconElementRight.type.displayName.should.equal('IconMenu');
+            iconElementRight.props.children.should.have.length(2);
 
             const iconButtonElement = iconElementRight.props.iconButtonElement;
-            expect(iconButtonElement.type.displayName).toBe('IconButton');
+            iconButtonElement.type.displayName.should.be.equal('IconButton');
         });
 
 
@@ -42,11 +45,8 @@ describe('components', () => {
             const menuItems = output.props.iconElementRight.props.children;
 
             menuItems[0].props.onClick();
-            expect(props.routing.push).toHaveBeenCalledWith('/');
+            props.routing.push.should.have.been.called.with('/');
             menuItems[1].props.onClick();
-            expect(props.routing.push).toHaveBeenCalledWith('/about');
+            props.routing.push.should.have.been.called.with('/about');
         });
-
     });
-
-});

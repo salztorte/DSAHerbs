@@ -1,4 +1,5 @@
-import expect from 'expect';
+import { should }from 'chai';
+should();
 import * as actions from '../../src/actions/select';
 import {SELECT_ACTION as types} from '../../src/config/constans';
 
@@ -10,7 +11,7 @@ describe('select action', () => {
             value
         };
 
-        expect(actions.changePlant(value)).toEqual(expectedAction);
+        actions.changePlant(value).should.be.eql(expectedAction);
     });
 
     it('should create an action to change poison', () => {
@@ -20,7 +21,7 @@ describe('select action', () => {
             value
         };
 
-        expect(actions.changePoison(value)).toEqual(expectedAction);
+        actions.changePoison(value).should.be.eql(expectedAction);
     });
 
 
@@ -31,7 +32,7 @@ describe('select action', () => {
             value
         };
 
-        expect(actions.changeMeans(value)).toEqual(expectedAction);
+        actions.changeMeans(value).should.be.eql(expectedAction);
     });
 
 });
