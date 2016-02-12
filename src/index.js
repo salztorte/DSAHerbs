@@ -17,12 +17,7 @@ import db from './database';
 injectTapEventPlugin();
 const store = configureStore();
 
-let log = text => {
-    console.log(text);
-};
-
-db.init(log);
-db.getValues(log);
+db.init();
 
 render(
     <Provider store={store}>

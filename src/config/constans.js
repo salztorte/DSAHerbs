@@ -40,12 +40,14 @@ export const OTHERS_TYPES = keyMirror(
         'Klebstoff',
         'Speziell'
     ]);
+
 export const SELECT_ACTION = keyMirror(
     [
         'CHANGE_DROPDOWN_PLANTS',
         'CHANGE_DROPDOWN_POISON',
         'CHANGE_DROPDOWN_MEANS']);
 
+export const SEARCH_ACTION = 'SEARCH_ACTION';
 
 //export const INIT_STATE = {
 //    'Pflanzenauswahl' : null

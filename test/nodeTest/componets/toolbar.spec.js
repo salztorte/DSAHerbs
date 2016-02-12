@@ -7,7 +7,7 @@ import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 
 import Toolbar from '../../../src/components/toolbar.jsx';
-
+import MenuItems from '../../../src/components/menuItems.jsx';
 const setup = ()=> {
     let props = {
         title: 'Test',
@@ -24,29 +24,17 @@ const setup = ()=> {
 };
 
 
+describe('Toolbar', () => {
+    it('should render correctly', () => {
+        const { output } = setup();
 
-    describe('Toolbar', () => {
-        it('should render correctly', () => {
-            const { output } = setup();
+        output.type.displayName.should.to.equal('AppBar');
 
-            output.type.displayName.should.to.equal('AppBar');
-
-            const iconElementRight = output.props.iconElementRight;
-            iconElementRight.type.displayName.should.equal('IconMenu');
-            iconElementRight.props.children.should.have.length(2);
-
-            const iconButtonElement = iconElementRight.props.iconButtonElement;
-            iconButtonElement.type.displayName.should.be.equal('IconButton');
-        });
+        const iconElementRight = output.props.iconElementRight;
+        iconElementRight.type.displayName.should.equal('IconMenu');
 
 
-        it('should call reouting.push if click on one item', () => {
-            const { output, props } = setup();
-            const menuItems = output.props.iconElementRight.props.children;
-
-            menuItems[0].props.onClick();
-            props.routing.push.should.have.been.called.with('/');
-            menuItems[1].props.onClick();
-            props.routing.push.should.have.been.called.with('/about');
-        });
+        const iconButtonElement = iconElementRight.props.iconButtonElement;
+        iconButtonElement.type.displayName.should.be.equal('IconButton');
     });
+});

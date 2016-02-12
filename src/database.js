@@ -32,14 +32,14 @@ let db = new function(){
 
     this.getByTyp = (typ, cb)=> {
         const keyRange = new ydn.db.KeyRange.only(typ);
-        const iter = new ydn.db.IndexValueIterator(storeName, "Typ", keyRange);
+        const iter = new ydn.db.IndexValueIterator(storeName, 'Typ', keyRange);
         valuesOf(iter, cb);
     };
     this.getByName= (name, cb) => {
         const keyRange = new ydn.db.KeyRange.lowerBound(name);
         const iter = new ydn.db.KeyIterator(storeName, keyRange);
         valuesOf(iter, cb);
-    }
+    };
 };
 
 export default db;

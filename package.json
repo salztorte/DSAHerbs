@@ -14,6 +14,8 @@
     "pretest:db": "npm run build:dbtest",
     "test:db": "mocha test/testDb",
     "build": "npm run build:dev",
+    "build:watch": "watch \"npm run build\" src/",
+
     "prebuild:dev": "npm run lint",
     "build:dev": "rollup -c rollup.dev.config.js",
     "build:dbtest": "rollup -c rollup.dbtest.config.js",
@@ -61,6 +63,7 @@
     "rollup-plugin-eslint": "^1.0.2",
     "rollup-plugin-npm": "^1.4.0",
     "rollup-plugin-replace": "^1.1.0",
-    "rollup-plugin-uglify": "^0.2.0"
+    "rollup-plugin-uglify": "^0.2.0",
+    "watch": "^0.17.1"
   }
 }

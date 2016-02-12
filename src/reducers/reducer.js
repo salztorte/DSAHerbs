@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import changeDropdown from './searchReducer.js';
+import changeDropdown from './selectReducer';
 import { routeReducer } from 'react-router-redux';
 
 const rootReducer = combineReducers(Object.assign(

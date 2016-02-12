@@ -31,7 +31,6 @@ const Search = props => {
     </Content>);
 };
 
-
 Search.propTypes = {
     values: PropTypes.object.isRequired,
     select: PropTypes.object.isRequired
