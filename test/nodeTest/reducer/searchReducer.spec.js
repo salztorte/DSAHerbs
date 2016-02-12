@@ -1,7 +1,7 @@
 import { should }from 'chai';
 should();
-import reducer from '../../src/reducers/searchReducer';
-import {SELECT_ACTION as types} from '../../src/config/constans';
+import reducer from '../../../src/reducers/searchReducer';
+import {SELECT_ACTION as types} from '../../../src/config/constans';
 
 
 describe('todos reducer', () => {

@@ -1,6 +1,6 @@
 import { should }from 'chai';
 should();
-import {keyMirror} from '../../src/config/constans';
+import {keyMirror} from '../../../src/config/constans';
 
 describe('tests keyMirror', () => {
     it('should create a Json ou of Array', () =>{

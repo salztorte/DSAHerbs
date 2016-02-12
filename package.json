@@ -9,11 +9,14 @@
   "bin": "./node_modules/.bin",
   "scripts": {
     "postinstall": "node ./scripts/postInstall.js",
-    "test": "mocha ",
+    "test": "mocha test/nodeTest",
     "test:watch": "npm run test -- --watch",
+    "pretest:db": "npm run build:dbtest",
+    "test:db": "mocha test/testDb",
     "build": "npm run build:dev",
     "prebuild:dev": "npm run lint",
     "build:dev": "rollup -c rollup.dev.config.js",
+    "build:dbtest": "rollup -c rollup.dbtest.config.js",
     "build:prod": "rollup -c rollup.prod.config.js",
     "lint": "eslint --ignore-path .eslintignore -c .eslintrc.json . --fix "
   },

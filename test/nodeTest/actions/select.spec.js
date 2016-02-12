@@ -1,7 +1,7 @@
 import { should }from 'chai';
 should();
-import * as actions from '../../src/actions/select';
-import {SELECT_ACTION as types} from '../../src/config/constans';
+import * as actions from '../../../src/actions/select';
+import {SELECT_ACTION as types} from '../../../src/config/constans';
 
 describe('select action', () => {
     it('should create an action to change plants', () => {

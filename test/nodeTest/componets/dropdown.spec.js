@@ -6,7 +6,7 @@ should();
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 
-import Dropdown from '../../src/components/dropdown.jsx';
+import Dropdown from '../../../src/components/dropdown.jsx';
 
 const setup = ()=> {
     const props = {

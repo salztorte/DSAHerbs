@@ -7,6 +7,9 @@ let dbConfig = {
                 'name': storeName,
                 'keyPath': 'Name',
                 'indexes': [{
+                    'name': 'Name',
+                    'keyPath': 'Name'
+                },{
                     'name': 'Typ',
                     'keyPath': 'Typ'
                 }, {
