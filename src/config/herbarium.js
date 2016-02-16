@@ -17,8 +17,8 @@ const herps = [
         'Name': 'Alraunen-Sud',
         'Typ': MEANS_TYPES.Alchimistischesmittel,
         'Effect': '',
-        'Quelle': '',
-        'Verarbeitung': []
+        'Occurrence' : '',
+        'Using': []
     }
 ];
 

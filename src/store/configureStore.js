@@ -1,4 +1,4 @@
-import { applyMiddleware, compose, createStore } from 'react-redux';
+import { applyMiddleware, compose, createStore } from 'redux';
 import { hashHistory } from 'react-router';
 import { syncHistory } from 'react-router-redux';
 

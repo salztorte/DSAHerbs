@@ -10,7 +10,9 @@ import { PLANTS_TYPES, POISON_TYPES, MEANS_TYPES } from '../config/constans';
 import * as SelectActions from '../actions/select';
 import { connector } from '../tools';
 
-const Search = props => {
+
+
+let Search = props => {
     const { values, select, routing} = props;
     return (<Content>
         <Dropdown elements={PLANTS_TYPES}

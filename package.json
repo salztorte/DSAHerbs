@@ -12,12 +12,9 @@
     "test": "mocha test",
     "test:watch": "npm run test -- --watch",
     "build": "npm run build:dev",
-
     "build:watch": "watch \"npm run build\" src/",
     "prebuild:dev": "npm run lint",
     "build:dev": "rollup -c rollup.dev.config.js",
-
-
     "build:prod": "rollup -c rollup.prod.config.js",
     "lint": "eslint --ignore-path .eslintignore -c .eslintrc.json . --fix "
   },
@@ -39,8 +36,7 @@
     "react-redux": "^4.0.6",
     "react-router": "^2.0.0-rc5",
     "react-router-redux": "^2.1.0",
-    "react-tap-event-plugin": "^0.2.1",
-    "redux": "^3.0.6"
+    "react-tap-event-plugin": "^0.2.1"
   },
   "devDependencies": {
     "babel-plugin-transform-object-assign": "^6.5.0",
@@ -55,6 +51,7 @@
     "eslint-plugin-react": "^3.16.1",
     "mocha": "^2.2.5",
     "react-addons-test-utils": "^0.14.6",
+    "redux": "^3.3.1",
     "rollup": "^0.25.3",
     "rollup-plugin-babel": "^2.3.9",
     "rollup-plugin-commonjs": "^2.2.1",

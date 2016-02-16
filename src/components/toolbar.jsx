@@ -14,7 +14,7 @@ let style = {
 const MenuIcon = (<IconButton><MoreVertIcon /></IconButton>);
 
 
-const Toolbar = (props) => {
+let Toolbar = (props) => {
     const { routing, title } = props;
 
     const ContextMenu = (

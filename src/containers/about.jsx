@@ -3,10 +3,10 @@ import React from 'react';
 import List from 'material-ui/lib/lists/list';
 
 import Content from './Content.jsx';
-
+import { connector } from '../tools';
 
 //TODO ordentliche 'textboxen' für das impresum machen
-const About = () =>(
+let About = () =>(
     <Content>
         <List>
             DSA Herps - Version 0.0
@@ -20,4 +20,9 @@ const About = () =>(
     </Content>
 );
 About.propTypes = {};
-export default About;
+
+const mapStateToProps = (state) => ({});
+
+const actionList = {};
+
+export default connector(mapStateToProps, actionList)(About);

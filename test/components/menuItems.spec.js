@@ -34,7 +34,7 @@ describe('MenuItems', () => {
         childrenElements[0].props.primaryText.should.be.equal('Search');
 
         childrenElements[1].type.displayName.should.be.equal('MenuItem');
-        childrenElements[1].props.primaryText.should.be.equal('About')
+        childrenElements[1].props.primaryText.should.be.equal('About');
     });
 
     it('should call the routing Methode', () => {

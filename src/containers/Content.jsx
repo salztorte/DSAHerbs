@@ -15,7 +15,7 @@ const getTitle = function(path){
     }
 };
 
-const Content = props =>{
+let Content = props =>{
     const { routing, children, path } = props;
     return (<div>
         <Toolbar title={getTitle(path)} routing={routing}/>

@@ -7,16 +7,10 @@ const SearchResults = () =>{
     </Content>);
 };
 
-
 SearchResults.propTypes ={
     values: PropTypes.object.isRequired
 };
 
-const mapStateToProps = (state) => ({
-    values: state.changeDropdown
-});
-
-const actionList = {PropTypes};
-
+const mapStateToProps = (state) => ({});
+const actionList = {};
 export default connector(mapStateToProps, actionList)(SearchResults);
-//export default (SearchResults);

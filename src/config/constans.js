@@ -42,9 +42,3 @@ export const SELECT_ACTION = keyMirror([
     'CHANGE_DROPDOWN_MEANS']);
 
 export const SEARCH_ACTION = 'SEARCH_ACTION';
-
-//export const INIT_STATE = {
-//    'Pflanzenauswahl' : null
-//};
-
-

@@ -2,16 +2,16 @@ import React, {PropTypes} from 'react';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 import SelectField from 'material-ui/lib/select-field';
 
-let createWrapper = function (itemsJson) {
+const createWrapper = function (itemsJson) {
     let resultArr = [];
     resultArr.push(<MenuItem primaryText="-" label=" "  key=" " value={null}/>);
-    for (var item in itemsJson) {
+    for (let item in itemsJson) {
         resultArr.push(<MenuItem primaryText={item} key={item} value={item}/>);
     }
     return resultArr;
 };
 
-const Dropdown = props =>(
+let Dropdown = props =>(
     <SelectField floatingLabelText={props.label}
                  style={{width : '100%'}}
                  value={props.value}
