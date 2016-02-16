@@ -16,7 +16,7 @@ const db = {
             if(herp.Typ == typ) back.push(herp);
         }
         return back;
-    },
+    }
     //getByName : (name) => {
     //    let back = [];
     //

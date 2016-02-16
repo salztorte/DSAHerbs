@@ -21,13 +21,11 @@ const store = configureStore();
 
 render(
     <Provider store={store}>
-        <div>
-            <Router history={hashHistory}>
-                <Route path='/' component={Search}/>
-                <Route path="/about" component={About}/>
-                <Route path="/result" component={SearchResults}/>
-            </Router>
-        </div>
+        <Router history={hashHistory}>
+            <Route path='/' component={Search}/>
+            <Route path="/about" component={About} />
+            <Route path="/result" component={SearchResults}/>
+        </Router>
     </Provider>,
     document.getElementById('content')
 );

@@ -1,4 +1,4 @@
-import { applyMiddleware, compose, createStore } from 'redux';
+import { applyMiddleware, compose, createStore } from 'react-redux';
 import { hashHistory } from 'react-router';
 import { syncHistory } from 'react-router-redux';
 
@@ -9,6 +9,8 @@ const reduxRouterMiddleware = syncHistory(hashHistory);
 const finalCreateStore = compose(
     applyMiddleware(reduxRouterMiddleware)
 )(createStore);
+
+
 
 export default function configureStore(initialState){
     const store = finalCreateStore(rootReducer, initialState);
