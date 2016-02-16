@@ -1,10 +1,10 @@
 import { should }from 'chai';
 should();
-import reducer from '../../../src/reducers/searchReducer';
-import {SELECT_ACTION as types} from '../../../src/config/constans';
+import reducer from '../../src/reducers/selectReducer';
+import {SELECT_ACTION as types} from '../../src/config/constans';
 
 
-describe('todos reducer', () => {
+describe('select reducer', () => {
     it('should return the initial state', () => {
 
         reducer(undefined, {}).should.to.eql({

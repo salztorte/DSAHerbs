@@ -12,12 +12,12 @@ import configureStore from './store/configureStore.js';
 import About from './containers/About.jsx';
 import Search from './containers/Search.jsx';
 import SearchResults from './containers/SearchResults.jsx';
-import db from './database';
+//import db from './database';
 
 injectTapEventPlugin();
 const store = configureStore();
 
-db.init();
+//db.init();
 
 render(
     <Provider store={store}>

@@ -6,7 +6,7 @@ should();
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 
-import MenuItem from '../../../src/components/menuItems.jsx';
+import MenuItem from '../../src/components/menuItems.jsx';
 
 const setup = ()=> {
     let props = {

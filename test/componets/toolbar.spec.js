@@ -6,8 +6,8 @@ should();
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 
-import Toolbar from '../../../src/components/toolbar.jsx';
-import MenuItems from '../../../src/components/menuItems.jsx';
+import Toolbar from '../../src/components/toolbar.jsx';
+import MenuItems from '../../src/components/menuItems.jsx';
 const setup = ()=> {
     let props = {
         title: 'Test',

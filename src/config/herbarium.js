@@ -1,6 +1,6 @@
 import { PLANTS_TYPES, MEANS_TYPES  } from './constans';
 //OTHERS_TYPES , POISON_TYPES
-let herps = [
+const herps = [
     {
         'Name': 'Alraune',
         'Source': 'ZBA Seite 227',
