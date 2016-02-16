@@ -11,20 +11,16 @@ let style = {
     'vertical': 'top'
 };
 
-const MenuIcon = (<IconButton><MoreVertIcon /></IconButton>);
+const ContextMenu = routing =>(
+    <IconMenu iconButtonElement={<IconButton><MoreVertIcon /></IconButton>} targetOrigin={style} anchorOrigin={style}>
+        <MenuItems routing={routing}/>
+    </IconMenu>
+);
 
 
-let Toolbar = (props) => {
-    const { routing, title } = props;
+let Toolbar = props =>(
+    <AppBar title={props.title} showMenuIconButton={false} iconElementRight={ContextMenu(props.routing)}/>);
 
-    const ContextMenu = (
-        <IconMenu iconButtonElement={MenuIcon} targetOrigin={style} anchorOrigin={style}>
-            <MenuItems routing={routing}/>
-        </IconMenu>
-    );
-
-    return (<AppBar title={title} showMenuIconButton={false} iconElementRight={ContextMenu}/>);
-};
 
 Toolbar.propTypes = {
     title: PropTypes.string.isRequired,

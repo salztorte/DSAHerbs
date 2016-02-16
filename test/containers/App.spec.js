@@ -41,6 +41,6 @@ describe('App Container', () => {
         resultRoute.props.path.should.be.equal('/result');
         resultRoute.props.component.displayName.should.be.equal('Connect(SearchResults)');
 
-    })
+    });
 
 });
