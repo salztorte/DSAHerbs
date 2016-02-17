@@ -3,13 +3,13 @@ import MenuItem from 'material-ui/lib/menus/menu-item';
 
 let MenuItems = (props) => (
     <div>
-        <MenuItem key="Search" primaryText="Search" onClick={() => {props.routing.push('/');}}/>
-        <MenuItem key="About" primaryText="About" onClick={() => {props.routing.push('/about');}}/>
+        <MenuItem key="Search" primaryText="Search" onClick={() => {props.routeActions.push('/');}}/>
+        <MenuItem key="About" primaryText="About" onClick={() => {props.routeActions.push('/about');}}/>
     </div>
 );
 
 MenuItems.propTypes = {
-    routing: PropTypes.object.isRequired
+    routeActions: PropTypes.object.isRequired
 };
 
 export default MenuItems;

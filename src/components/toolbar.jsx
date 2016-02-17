@@ -11,20 +11,31 @@ let style = {
     'vertical': 'top'
 };
 
-const ContextMenu = routing =>(
+const ContextMenu = routeActions =>(
     <IconMenu iconButtonElement={<IconButton><MoreVertIcon /></IconButton>} targetOrigin={style} anchorOrigin={style}>
-        <MenuItems routing={routing}/>
+        <MenuItems routeActions={routeActions}/>
     </IconMenu>
 );
 
+export const pathToTitle = path =>{
+    switch(path){
+        case '/':
+            return 'DSAHerps';
+        case '/about':
+            return 'About';
+        case '/result':
+            return 'Ergebnis';
+    }
+};
+
 
 let Toolbar = props =>(
-    <AppBar title={props.title} showMenuIconButton={false} iconElementRight={ContextMenu(props.routing)}/>);
+    <AppBar title={pathToTitle(props.path)} showMenuIconButton={false} iconElementRight={ContextMenu(props.routeActions)}/>);
 
 
 Toolbar.propTypes = {
-    title: PropTypes.string.isRequired,
-    routing: PropTypes.object.isRequired
+    path: PropTypes.string.isRequired,
+    routeActions: PropTypes.object.isRequired
 };
 
 export default Toolbar;

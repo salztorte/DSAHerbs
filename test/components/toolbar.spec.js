@@ -6,11 +6,11 @@ chai.use(spies);
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 
-import Toolbar from '../../src/components/toolbar.jsx';
+import Toolbar,{ pathToTitle }from '../../src/components/toolbar.jsx';
 const setup = ()=> {
     let props = {
-        title: 'Test',
-        routing: {
+        path: '/',
+        routeActions: {
             push: chai.spy()
         }
     };
@@ -34,5 +34,12 @@ describe('Toolbar', () => {
 
         const iconButtonElement = iconElementRight.props.iconButtonElement;
         expect(iconButtonElement.type.displayName).be.equal('IconButton');
+    });
+
+
+    it('should parse the path correct', () => {
+        expect(pathToTitle('/')).to.be.equal('DSAHerps');
+        expect(pathToTitle('/about')).to.be.equal('About');
+        expect(pathToTitle('/result')).to.be.equal('Ergebnis');
     });
 });

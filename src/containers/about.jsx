@@ -5,6 +5,18 @@ import List from 'material-ui/lib/lists/list';
 import Content from './Content.jsx';
 import { connector } from '../tools';
 
+const getTitle = function(path){
+    switch(path){
+        case '/':
+            return 'DSAHerps';
+        case '/about':
+            return 'About';
+        case '/result':
+            return 'Ergebnis';
+    }
+};
+
+
 //TODO ordentliche 'textboxen' für das impresum machen
 let About = () =>(
     <Content>

@@ -9,7 +9,7 @@ import MenuItem from '../../src/components/menuItems.jsx';
 
 const setup = ()=> {
     let props = {
-        routing: {
+        routeActions: {
             push: chai.spy()
         }
     };
@@ -42,10 +42,10 @@ describe('MenuItems', () => {
         const childrenElements = output.props.children;
 
         childrenElements[0].props.onClick();
-        expect(props.routing.push).have.been.called.with('/');
+        expect(props.routeActions.push).have.been.called.with('/');
 
         childrenElements[1].props.onClick();
-        expect(props.routing.push).have.been.called.with('/about');
+        expect(props.routeActions.push).have.been.called.with('/about');
 
     });
 });

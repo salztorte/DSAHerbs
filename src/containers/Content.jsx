@@ -4,21 +4,12 @@ import { routeActions } from 'react-router-redux';
 import Toolbar  from '../components/Toolbar.jsx';
 import { connector } from '../tools';
 
-const getTitle = function(path){
-    switch(path){
-        case '/':
-            return 'DSAHerps';
-        case '/about':
-            return 'About';
-        case '/result':
-            return 'Ergebnis';
-    }
-};
+
 
 let Content = props =>{
-    const { routing, children, path } = props;
+    const { routeActions, children, path } = props;
     return (<div>
-        <Toolbar title={getTitle(path)} routing={routing}/>
+        <Toolbar path={path} routeActions={routeActions}/>
         <div style={{marginLeft : 20,marginRight : 20}}>
             {children}
         </div>
@@ -26,7 +17,7 @@ let Content = props =>{
 };
 
 Content.propTypes = {
-    routing : PropTypes.object.isRequired,
+    routeActions : PropTypes.object.isRequired,
     path : PropTypes.string.isRequired
 };
 
@@ -35,7 +26,7 @@ const mapStateToProps = (state) => ({
 });
 
 const actionList = {
-    'routing' : routeActions
+    routeActions : routeActions
 };
 
 export default connector(mapStateToProps, actionList)(Content);

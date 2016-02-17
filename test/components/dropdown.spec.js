@@ -1,5 +1,6 @@
 import chai, { expect }from 'chai';
 import spies from 'chai-spies';
+chai.use(spies);
 
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
