@@ -3,7 +3,7 @@ import { routeActions } from 'react-router-redux';
 
 import RaisedButton from 'material-ui/lib/raised-button';
 
-import Dropdown from '../components/dropdown.jsx';
+import Dropdown from '../components/Dropdown.jsx';
 import Content from './Content.jsx';
 
 import { PLANTS_TYPES, POISON_TYPES, MEANS_TYPES } from '../config/constans';

@@ -1,7 +1,7 @@
-import chai, { should }from 'chai';
+import chai, { expect }from 'chai';
 import spies from 'chai-spies';
 chai.use(spies);
-should();
+
 
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
@@ -27,13 +27,12 @@ describe('Toolbar', () => {
     it('should render correctly', () => {
         const { output } = setup();
 
-        output.type.displayName.should.to.equal('AppBar');
+        expect(output.type.displayName).to.equal('AppBar');
 
         const iconElementRight = output.props.iconElementRight;
-        iconElementRight.type.displayName.should.equal('IconMenu');
-
+        expect(iconElementRight.type.displayName).equal('IconMenu');
 
         const iconButtonElement = iconElementRight.props.iconButtonElement;
-        iconButtonElement.type.displayName.should.be.equal('IconButton');
+        expect(iconButtonElement.type.displayName).be.equal('IconButton');
     });
 });

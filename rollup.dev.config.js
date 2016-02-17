@@ -2,14 +2,14 @@ import fs from 'fs';
 
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
-import npm from 'rollup-plugin-npm';
+import nodeResolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
 
 let babelrc = JSON.parse(fs.readFileSync('.babelrc', 'utf8'));
 babelrc.presets[babelrc.presets.indexOf('es2015')] = 'es2015-rollup';
 babelrc.babelrc = false;
 
-const config = {
+let config = {
     entry: 'src/index.js',
     dest: 'www/build/bundle.js',
     format: 'iife',
@@ -18,7 +18,7 @@ const config = {
         replace({
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
-        npm({jsnext: true, main: true}),
+        nodeResolve({jsnext: true, main: true, browser: true}),
         commonjs({
             include: ['node_modules/**'],
             namedExports: {

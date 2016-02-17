@@ -1,7 +1,6 @@
-import chai, { should }from 'chai';
+import chai, { expect }from 'chai';
 import spies from 'chai-spies';
 chai.use(spies);
-should();
 
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
@@ -28,13 +27,13 @@ describe('MenuItems', () => {
         const { output } = setup();
 
         const childrenElements = output.props.children;
-        childrenElements.should.have.length(2);
+        expect(childrenElements).have.length(2);
 
-        childrenElements[0].type.displayName.should.be.equal('MenuItem');
-        childrenElements[0].props.primaryText.should.be.equal('Search');
+        expect(childrenElements[0].type.displayName).be.equal('MenuItem');
+        expect(childrenElements[0].props.primaryText).be.equal('Search');
 
-        childrenElements[1].type.displayName.should.be.equal('MenuItem');
-        childrenElements[1].props.primaryText.should.be.equal('About');
+        expect(childrenElements[1].type.displayName).be.equal('MenuItem');
+        expect(childrenElements[1].props.primaryText).be.equal('About');
     });
 
     it('should call the routing Methode', () => {
@@ -43,10 +42,10 @@ describe('MenuItems', () => {
         const childrenElements = output.props.children;
 
         childrenElements[0].props.onClick();
-        props.routing.push.should.have.been.called.with('/');
+        expect(props.routing.push).have.been.called.with('/');
 
         childrenElements[1].props.onClick();
-        props.routing.push.should.have.been.called.with('/about');
+        expect(props.routing.push).have.been.called.with('/about');
 
     });
 });

@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 import SelectField from 'material-ui/lib/select-field';
 
-const createWrapper = function (itemsJson) {
+export const createWrapper = function (itemsJson) {
     let resultArr = [];
     resultArr.push(<MenuItem primaryText="-" label=" "  key=" " value={null}/>);
     for (let item in itemsJson) {

@@ -1,15 +1,13 @@
-import { should }from 'chai';
-should();
+import { expect }from 'chai';
 
 describe('tests', () => {
 
     it('should test', () =>{
-        (1).should.be.equal(1);
+        expect(1).be.equal(1);
     });
 
     it('should be able to write to console', ()=>{
-        console.should.to.not.be.null;
-        console.log('ConsoleTest', 'Hello World!');
+        expect(console).to.not.be.null;
     });
 });
 
@@ -28,10 +26,10 @@ describe('JavaScript', function(){
         const two = buf[1];
         const three = buf[2];
 
-        buf.should.have.length(3);
+        expect(buf).have.length(3);
 
-        one.should.be.equal(1);
-        two.should.be.equal(2);
-        three.should.be.equal(3);
+        expect(one).be.equal(1);
+        expect(two).be.equal(2);
+        expect(three).be.equal(3);
     });
 });

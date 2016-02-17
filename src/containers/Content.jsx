@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { routeActions } from 'react-router-redux';
 
-import Toolbar  from '../components/toolbar.jsx';
+import Toolbar  from '../components/Toolbar.jsx';
 import { connector } from '../tools';
 
 const getTitle = function(path){

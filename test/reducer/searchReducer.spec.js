@@ -1,5 +1,5 @@
-import { should }from 'chai';
-should();
+import { expect }from 'chai';
+
 import reducer from '../../src/reducers/selectReducer';
 import {SELECT_ACTION as types} from '../../src/config/constans';
 
@@ -7,7 +7,7 @@ import {SELECT_ACTION as types} from '../../src/config/constans';
 describe('select reducer', () => {
     it('should return the initial state', () => {
 
-        reducer(undefined, {}).should.to.eql({
+        expect(reducer(undefined, {})).to.eql({
             'plant': null,
             'poison': null,
             'means': null
@@ -16,29 +16,29 @@ describe('select reducer', () => {
 
     it('should handle dropdown changes', () => {
 
-        reducer(undefined, {
+        expect(reducer(undefined, {
             type: types.CHANGE_DROPDOWN_PLANTS,
             value: 'tunin'
-        }).should.be.eql({
+        })).be.eql({
             'plant': 'tunin',
             'poison': null,
             'means': null
         });
 
 
-        reducer(undefined, {
+        expect(reducer(undefined, {
             type: types.CHANGE_DROPDOWN_POISON,
             value: 'tunin'
-        }).should.be.eql({
+        })).be.eql({
             'plant': null,
             'poison': 'tunin',
             'means': null
         });
 
-        reducer(undefined, {
+        expect(reducer(undefined, {
             type: types.CHANGE_DROPDOWN_MEANS,
             value: 'tunin'
-        }).should.be.eql({
+        })).be.eql({
             'plant': null,
             'poison': null,
             'means': 'tunin'

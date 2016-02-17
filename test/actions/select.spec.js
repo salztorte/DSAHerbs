@@ -1,5 +1,5 @@
-import { should }from 'chai';
-should();
+import { expect }from 'chai';
+
 import * as actions from '../../src/actions/select';
 import {SELECT_ACTION as types} from '../../src/config/constans';
 
@@ -10,8 +10,7 @@ describe('select action', () => {
             type: types.CHANGE_DROPDOWN_PLANTS,
             value
         };
-
-        actions.changePlant(value).should.be.eql(expectedAction);
+        expect(actions.changePlant(value)).be.eql(expectedAction);
     });
 
     it('should create an action to change poison', () => {
@@ -20,10 +19,8 @@ describe('select action', () => {
             type: types.CHANGE_DROPDOWN_POISON,
             value
         };
-
-        actions.changePoison(value).should.be.eql(expectedAction);
+        expect(actions.changePoison(value)).be.eql(expectedAction);
     });
-
 
     it('should create an action to change means', () => {
         const value = 'Tunin';
@@ -32,7 +29,6 @@ describe('select action', () => {
             value
         };
 
-        actions.changeMeans(value).should.be.eql(expectedAction);
+        expect(actions.changeMeans(value)).be.eql(expectedAction);
     });
-
 });

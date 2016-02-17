@@ -17,4 +17,8 @@ describe('Database', () => {
         db.getByName('Alr').should.length(3);
     });
 
+    it('should get all entries by effect', () => {
+        db.getByEffect('Brech').should.length(2);
+    });
+
 });
