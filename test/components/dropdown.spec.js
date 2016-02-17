@@ -44,9 +44,9 @@ describe('Dropdown', () => {
     });
 
 
-    it('should create the Items correct', () => {
+    it('should create the items correct', () => {
         const wrapper = createWrapper({1:1,2:2,3:3});
-        wrapper.should.have.length(4);
+        expect(wrapper).have.length(4);
 
         expect(wrapper[0].type.displayName).be.equal('MenuItem');
         expect(wrapper[0].props.primaryText).be.equal('-');

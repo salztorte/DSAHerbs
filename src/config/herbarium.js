@@ -4,20 +4,20 @@ const herps = [
     {
         'Name': 'Alraune',
         'Source': 'ZBA Seite 227',
-        'Typ': PLANTS_TYPES.Nutzpflanze,
+        'Typ': [PLANTS_TYPES.Nutzpflanze],
         'Using': ['eingelete Alraunwurzel', 'Alraunen-Sud'],
         'Occurrence': [],
-        'Effect': 'Brechreiz'
+        'Effect': ['Brechreiz']
     }, {
         'Name': 'eingelete Alraunwurzel',
         'Source': 'ZBA Seite 227',
-        'Typ': PLANTS_TYPES.Nutzpflanze,
-        'Effect': 'Brechreiz'
+        'Typ': [PLANTS_TYPES.Nutzpflanze],
+        'Effect': ['Brechreiz']
     }, {
         'Name': 'Alraunen-Sud',
-        'Typ': MEANS_TYPES.Alchimistischesmittel,
-        'Effect': '',
-        'Occurrence' : '',
+        'Typ': [MEANS_TYPES.Alchimistischesmittel],
+        'Effect': [],
+        'Occurrence' : [],
         'Using': []
     }
 ];
