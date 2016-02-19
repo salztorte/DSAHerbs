@@ -22,8 +22,5 @@
   },
   "plugins" : [
     "react"
-  ],
-  "globals": {
-    "ydn": true
-  }
+  ]
 }
