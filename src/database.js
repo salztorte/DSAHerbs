@@ -1,3 +1,4 @@
+import { herps } from './config/herbarium';
 
 let cmp = (item, searchTerm) => {
     if (Object.keys(searchTerm).length == 1) {
@@ -36,7 +37,7 @@ JsonQuery.prototype.query = function(searchTerm = []){
 };
 
 export default JsonQuery;
-
+export let db = new JsonQuery(herps);
 
 
 

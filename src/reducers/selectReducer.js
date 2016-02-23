@@ -7,7 +7,6 @@ const INIT_STATE = {
 };
 
 export default function changeDropdown(state = INIT_STATE, action){
-
     let nextState = JSON.parse(JSON.stringify(state));
     switch(action.type){
         case SELECT_ACTION.CHANGE_DROPDOWN_PLANTS:

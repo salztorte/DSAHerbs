@@ -11,6 +11,7 @@
     "postinstall": "node ./scripts/postInstall.js",
     "test": "mocha test",
     "test:watch": "npm run test -- --watch",
+
     "build": "npm run build:dev",
     "build:watch": "watch \"npm run build\" src/",
     "prebuild:dev": "npm run lint",

@@ -1,9 +1,8 @@
 import { expect }from 'chai';
-import { herps } from '../src/config/herbarium';
-import JsonQuery from '../src/database';
+import { db } from '../src/database';
 import { PLANTS_TYPES } from '../src/config/constans';
 
-let db = new JsonQuery(herps);
+
 
 //Wenn der Datenbestand im Herbarium wächst müsssen auch die Tests angepasst werden.
 describe('Database', () => {
