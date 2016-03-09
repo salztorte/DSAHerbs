@@ -18,6 +18,9 @@ describe('Database', () => {
         expect(db.query({'Name' : 'Alr'})).length(3);
     });
 
+
+    //asdfasdfsdd
+
     it('should get all entries by effect', () => {
         expect(db.query({'Effect':'Brech'})).length(2);
     });
